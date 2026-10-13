@@ -1,0 +1,632 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Milou Sports</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: boutique lookbook — centered monogram hero over a gold ridgeline, then asymmetric editorial bands on ivory and sand */
+:root{
+  --ivory:#FBF9F5;
+  --sand:#EFE8DC;
+  --stone:#D9CFBF;
+  --ink:#2B2620;
+  --muted:#7A6F62;
+  --gold:#B08D57;
+  --gold-soft:#C9AE7E;
+  --line:rgba(176,141,87,.35);
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Jost","Futura","Avenir Next","Helvetica Neue",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ivory:#1C1915;--sand:#25211B;--stone:#3A332A;--ink:#F1EBE1;--muted:#B3A795;--gold:#CFAE74;--gold-soft:#A88B5C;--line:rgba(207,174,116,.3);color-scheme:dark}}
+:root[data-theme="dark"]{--ivory:#1C1915;--sand:#25211B;--stone:#3A332A;--ink:#F1EBE1;--muted:#B3A795;--gold:#CFAE74;--gold-soft:#A88B5C;--line:rgba(207,174,116,.3);color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,5vw,48px)}
+.eyebrow{font-family:var(--body);font-size:.72rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+h2{font-size:clamp(2rem,4.6vw,3.4rem)}
+h2 em{font-style:italic;color:var(--gold)}
+p{margin:0;max-width:62ch}
+:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+
+/* Header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--ivory) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.logo{font-family:var(--display);font-size:1.35rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.logo span{color:var(--gold)}
+.nav ul{display:flex;gap:clamp(14px,3vw,36px);list-style:none;margin:0;padding:0}
+.nav ul a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .3s}
+.nav ul a:hover{color:var(--gold)}
+@media (max-width:640px){.nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;text-align:center;padding-block:clamp(72px,12vw,140px) 0;overflow:hidden}
+.hero .eyebrow{display:block;margin-bottom:28px}
+.hero h1{font-size:clamp(3.4rem,13vw,9.5rem);letter-spacing:.06em;text-transform:uppercase;line-height:.95}
+.hero h1 .amp{display:block;font-style:italic;text-transform:none;letter-spacing:0;font-size:.32em;color:var(--gold);margin-top:.4em}
+.hero p{margin:34px auto 0;color:var(--muted);font-size:1.05rem}
+.cta{display:inline-flex;gap:14px;margin-top:40px;flex-wrap:wrap;justify-content:center}
+.btn{display:inline-block;padding:15px 34px;font-size:.72rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:background .35s,color .35s}
+.btn.solid{background:var(--gold);color:var(--ivory)}
+.btn.solid:hover{background:transparent;color:var(--gold)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--gold);color:var(--ivory)}
+.ridge{display:block;width:100%;max-width:100%;height:auto;margin-top:clamp(56px,8vw,96px)}
+.ridge path{fill:none;stroke:var(--gold);stroke-width:1.1;vector-effect:non-scaling-stroke}
+.ridge .fill{fill:var(--sand);stroke:none}
+.alt{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-variant-numeric:tabular-nums;padding-block:14px 0}
+.alt b{font-weight:500;color:var(--gold)}
+
+/* Maison */
+.maison{background:var(--sand);padding-block:clamp(72px,10vw,130px)}
+.maison .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,6vw,90px);align-items:start}
+.maison .grid>*{min-width:0}
+.maison h2{margin-top:18px}
+.maison .text{display:grid;gap:22px;color:var(--muted);padding-top:10px}
+.maison .text p:first-child{font-family:var(--display);font-size:1.45rem;line-height:1.5;color:var(--ink)}
+.sig{display:flex;align-items:center;gap:18px;margin-top:10px}
+.sig::before{content:"";width:48px;height:1px;background:var(--gold)}
+.sig span{font-family:var(--display);font-style:italic;font-size:1.2rem;color:var(--gold)}
+@media (max-width:820px){.maison .grid{grid-template-columns:1fr}}
+
+/* Marques */
+.marques{padding-block:clamp(72px,10vw,130px)}
+.marques header.sec{position:static;background:none;backdrop-filter:none;border:0;display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(40px,6vw,70px)}
+.marques header.sec p{color:var(--muted);max-width:40ch}
+.brands{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.brands li{display:grid;grid-template-columns:4rem 1fr auto;align-items:baseline;gap:20px;padding-block:clamp(20px,3vw,30px);border-bottom:1px solid var(--line);transition:padding .4s}
+.brands li>*{min-width:0}
+.brands .origin{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.brands .name{font-family:var(--display);font-size:clamp(1.8rem,5.5vw,3.6rem);line-height:1;transition:color .4s,letter-spacing .4s}
+.brands .tag{font-size:.75rem;color:var(--muted);text-align:right}
+.brands li:hover .name{color:var(--gold);letter-spacing:.02em}
+.brands li.soon .name{font-style:italic;color:var(--gold)}
+.brands li.soon .tag{color:var(--gold);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;border:1px solid var(--gold);padding:6px 12px}
+@media (max-width:560px){.brands li{grid-template-columns:1fr auto}.brands .origin{display:none}}
+
+/* Univers */
+.univers{background:var(--sand);padding-block:clamp(72px,10vw,130px)}
+.univers h2{margin:18px 0 clamp(40px,6vw,70px)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.5vw,28px)}
+.card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;padding:32px;background:var(--ivory);border:1px solid var(--line);overflow:hidden}
+.card::before{content:attr(data-n);position:absolute;top:18px;right:26px;font-family:var(--display);font-style:italic;font-size:7rem;line-height:1;color:var(--stone)}
+.card .eyebrow{margin-bottom:14px}
+.card h3{font-size:2rem;margin-bottom:14px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .bar{width:36px;height:1px;background:var(--gold);margin-bottom:22px;transition:width .5s}
+.card:hover .bar{width:100%}
+@media (max-width:900px){.trio{grid-template-columns:1fr}.card{min-height:300px}}
+
+/* Location */
+.location{padding-block:clamp(72px,10vw,130px)}
+.location .head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,6vw,70px)}
+.location .head>*{min-width:0}
+.location .head p{color:var(--muted)}
+.gammes{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.gamme{display:grid;gap:12px;align-content:start;padding:clamp(24px,3vw,36px);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s}
+.gamme:hover{background:var(--sand)}
+.gamme .lvl{font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.gamme h3{font-size:1.7rem}
+.gamme p{color:var(--muted);font-size:.95rem}
+.gamme .price{margin-top:8px;font-family:var(--display);font-style:italic;color:var(--ink);font-variant-numeric:tabular-nums}
+.gamme.star{background:var(--sand)}
+.gamme.star h3{color:var(--gold)}
+.rent-foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:clamp(32px,5vw,48px)}
+.perks{display:flex;flex-wrap:wrap;gap:10px 28px;list-style:none;margin:0;padding:0;font-size:.85rem;color:var(--muted)}
+.perks li::before{content:"◆";color:var(--gold);font-size:.6rem;margin-right:10px;vertical-align:2px}
+@media (max-width:900px){.gammes{grid-template-columns:repeat(2,1fr)}.location .head{grid-template-columns:1fr}}
+@media (max-width:560px){.gammes{grid-template-columns:1fr}}
+
+/* Services */
+.services{padding-block:clamp(72px,10vw,130px)}
+.services .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,40px);margin-top:clamp(40px,6vw,64px)}
+.svc{display:grid;gap:12px;align-content:start;padding-top:24px;border-top:1px solid var(--gold)}
+.svc h3{font-size:1.4rem}
+.svc p{color:var(--muted);font-size:.95rem}
+@media (max-width:900px){.services .grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.services .grid{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{background:var(--ink);color:var(--ivory);padding-block:clamp(72px,10vw,120px)}
+.contact .grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(32px,5vw,70px)}
+.contact .grid>*{min-width:0}
+.contact h2{color:var(--ivory)}
+.contact h4{margin:0 0 14px;font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft)}
+.contact p,.contact li{color:color-mix(in srgb,var(--ivory) 72%,transparent);font-size:.95rem}
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-variant-numeric:tabular-nums}
+.contact li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid rgba(201,174,126,.18);padding-bottom:6px}
+.contact .btn{margin-top:28px;border-color:var(--gold-soft);color:var(--ivory)}
+.contact .btn:hover{background:var(--gold-soft);color:var(--ink)}
+@media (max-width:820px){.contact .grid{grid-template-columns:1fr}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact{background:#0F0D0A}}
+:root[data-theme="dark"] .contact{background:#0F0D0A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact h2{color:var(--ink)}}
+footer{background:var(--ink);color:color-mix(in srgb,var(--ivory) 50%,transparent);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:22px;border-top:1px solid rgba(201,174,126,.18)}
+
+/* Photos */
+.photo{margin:0;position:relative}
+.photo img{display:block;width:100%;max-width:100%;height:auto;object-fit:cover;background:var(--stone)}
+.photo figcaption{margin-top:12px;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.photo.framed::after{content:"";position:absolute;inset:14px;border:1px solid rgba(201,174,126,.55);pointer-events:none}
+.maison .photo{margin-top:clamp(32px,5vw,56px)}
+.maison .photo img{aspect-ratio:3/4}
+/* Recadrage façade : on rogne la droite et le bas pour centrer l'entrée */
+.maison .photo.crop-entree{overflow:hidden}
+.maison .photo.crop-entree img{aspect-ratio:10/11;object-position:0 0;transform:scale(1.1);transform-origin:0 0}
+.ambiance{padding-block:0 clamp(72px,10vw,130px)}
+.ambiance .grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:clamp(16px,2.5vw,28px);align-items:end}
+.ambiance .grid>*{min-width:0}
+.ambiance .intro{display:grid;gap:18px;align-self:center}
+.ambiance .intro p{color:var(--muted)}
+.ambiance .photo img{aspect-ratio:3/4}
+.ambiance .photo.offset{margin-bottom:clamp(0px,6vw,72px)}
+@media (max-width:820px){.ambiance .grid{grid-template-columns:1fr 1fr}.ambiance .intro{grid-column:1/-1}.ambiance .photo.offset{margin-bottom:0}}
+.contact .photo{margin-top:36px}
+.contact .photo img{aspect-ratio:4/5;object-position:50% 40%}
+.contact .photo figcaption{color:color-mix(in srgb,var(--ivory) 55%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact .photo figcaption{color:var(--muted)}}
+
+/* Lookbook Fusalp */
+.brands li.has-look{display:block;padding-block:clamp(20px,3vw,30px)}
+.brands li.has-look>.row{display:grid;grid-template-columns:4rem 1fr auto;align-items:baseline;gap:20px}
+.brands .cols{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0 calc(4rem + 20px)}
+.brands .cols button{all:unset;cursor:pointer;padding:11px 22px;font-size:.66rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);transition:background .3s,color .3s}
+.brands .cols button::after{content:" →"}
+.brands .cols button:hover{background:var(--gold);color:var(--ivory)}
+.brands .cols button:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+@media (max-width:560px){.brands .cols{margin-left:0}}
+.brands li.has-look>.row>*{min-width:0}
+.brands li.has-look:hover .name{color:var(--gold);letter-spacing:.02em}
+.brands .see{display:block;margin-top:6px;font-size:.64rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.brands .see::after{content:" →";transition:margin .3s}
+.brands li.has-look:hover .see::after{margin-left:6px}
+@media (max-width:560px){.brands li.has-look>.row{grid-template-columns:1fr auto}}
+dialog.look{width:100%;max-width:100%;height:100%;max-height:100%;margin:0;padding:0;border:0;background:var(--ivory);color:var(--ink);overscroll-behavior:contain}
+dialog.look::backdrop{background:rgba(20,17,13,.55)}
+dialog.look[open]{display:flex;flex-direction:column}
+.look-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(env(safe-area-inset-top,0px) + 18px) clamp(16px,5vw,48px) 18px;border-bottom:1px solid var(--line)}
+.look-top .logo{font-size:1.1rem}
+.look-close{all:unset;cursor:pointer;font-size:.7rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--ink);padding:10px 0 10px 16px;display:flex;align-items:center;gap:10px}
+.look-close span{font-size:1.4rem;line-height:1;color:var(--gold)}
+.look-close:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.look-body{flex:1;overflow-y:auto;padding-block:clamp(36px,6vw,72px) calc(env(safe-area-inset-bottom,0px) + 40px)}
+.look-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,48px)}
+.look-head h2{margin-top:16px}
+.look-head p{color:var(--muted);max-width:44ch}
+.look-head .only{display:block;margin-top:10px;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.reel{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(240px,30vw,380px);gap:clamp(14px,2vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;padding-inline:clamp(16px,5vw,48px);scroll-padding-inline:clamp(16px,5vw,48px);padding-bottom:18px;scrollbar-width:thin;scrollbar-color:var(--gold-soft) transparent}
+.reel figure{margin:0;scroll-snap-align:start;min-width:0}
+.reel img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;background:var(--sand)}
+.reel figcaption{display:grid;gap:2px;margin-top:14px}
+.reel figcaption b{font-family:var(--display);font-weight:400;font-size:1.2rem}
+.reel figcaption span{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.reel-nav{display:flex;gap:10px}
+.reel-nav button{all:unset;cursor:pointer;width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--gold);font-size:1.1rem;transition:background .3s,color .3s}
+.reel-nav button:hover{background:var(--gold);color:var(--ivory)}
+.reel-nav button:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.look-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:clamp(28px,4vw,44px);padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.look-tabs{display:flex;gap:32px;border-bottom:1px solid var(--line);margin-bottom:clamp(24px,3vw,36px)}
+.look-tabs button{all:unset;cursor:pointer;padding:10px 0 14px;margin-bottom:-1px;font-size:.74rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.look-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--gold)}
+.look-tabs button:hover{color:var(--gold)}
+.look-tabs button:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+html.lock{overflow:hidden}
+
+/* Reveal */
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero p,.hero .cta,.hero .eyebrow{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1{animation-delay:.1s}.hero p{animation-delay:.35s}.hero .cta{animation-delay:.5s}
+  .ridge path:not(.fill){stroke-dasharray:3000;stroke-dashoffset:3000;animation:draw 3.2s .4s ease-out forwards}
+}
+@keyframes rise{from{transform:translateY(18px);opacity:.15}to{transform:none;opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+</style>
+
+<header>
+  <nav class="wrap nav" aria-label="Navigation principale">
+    <a href="#top" class="logo">Milou <span>·</span> Sports</a>
+    <ul>
+      <li><a href="#maison">La Maison</a></li>
+      <li><a href="#marques">Marques</a></li>
+      <li><a href="#univers">Univers</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Nous trouver</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Boutique · Les Deux Alpes</span>
+      <h1>Milou<span class="amp">sport &amp; élégance alpine</span></h1>
+      <p>Une sélection de créateurs de ski et de mode, choisis pour celles et ceux qui vivent la montagne avec style, des pistes du glacier jusqu'aux terrasses d'altitude.</p>
+      <div class="cta">
+        <a href="#marques" class="btn solid">Découvrir les marques</a>
+        <a href="https://location-ski.sport2000.fr/magasins/1296-sport-2000-milou-sports?at_medium=cta&amp;at_campaign=google_local&amp;at_creation=gmb" target="_blank" rel="noopener" class="btn ghost">Réserver ma location</a>
+      </div>
+    </div>
+    <svg class="ridge" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+      <path class="fill" d="M0 220 L0 170 L90 150 L160 160 L240 118 L300 132 L380 80 L430 96 L520 38 L575 70 L640 52 L700 90 L760 74 L840 120 L900 104 L980 140 L1060 128 L1130 156 L1200 146 L1200 220 Z"/>
+      <path d="M0 170 L90 150 L160 160 L240 118 L300 132 L380 80 L430 96 L520 38 L575 70 L640 52 L700 90 L760 74 L840 120 L900 104 L980 140 L1060 128 L1130 156 L1200 146"/>
+    </svg>
+  </section>
+
+  <div style="background:var(--sand)">
+    <div class="wrap alt"><span>Village <b>1 650 m</b></span><span>Glacier <b>3 600 m</b></span></div>
+  </div>
+
+  <section class="maison" id="maison">
+    <div class="wrap grid">
+      <div>
+        <span class="eyebrow">La Maison</span>
+        <h2>L'allure <em>au sommet</em></h2>
+        <figure class="photo framed crop-entree">
+          <img src="img/facade-nuit.jpg" width="1100" height="1467" alt="L'entrée du chalet Milou Sports illuminée la nuit sous la neige, avec sa porte blanche" loading="lazy">
+        </figure>
+      </div>
+      <div class="text">
+        <p>Au cœur de la station, Milou Sports réunit les grandes signatures du ski et de la mode montagne dans un écrin de bois clair, de lin et de laiton.</p>
+        <p>Chaque pièce est sélectionnée pour sa coupe, ses matières et sa tenue sur les pistes comme en ville. Combinaisons techniques, doudounes iconiques, maille douce et tenues d'après-ski : la garde-robe complète d'une saison en altitude.</p>
+        <p>Notre équipe vous reçoit en français et en anglais, pour un conseil attentif et sans précipitation.</p>
+        <div class="sig"><span>Milou Sports, Les Deux Alpes</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="marques" id="marques">
+    <div class="wrap">
+      <header class="sec">
+        <div>
+          <span class="eyebrow">Nos marques</span>
+          <h2 style="margin-top:18px">Une sélection <em>de créateurs</em></h2>
+        </div>
+        <p>Des signatures du ski de luxe aux labels de mode, toutes réunies sous un même toit.</p>
+      </header>
+      <ul class="brands">
+        <li class="has-look"><div class="row"><span class="origin">France</span><span class="name">Fusalp</span><span class="tag">Ski couture depuis 1952</span></div>
+          <div class="cols"><button type="button" data-open="look-fusalp" data-col="reel-fusalp" data-genre="femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-fusalp" data-col="reel-fusalp-homme" data-genre="homme" aria-haspopup="dialog">Collection homme</button></div></li>
+        <li class="has-look"><div class="row"><span class="origin">Londres</span><span class="name">Perfect Moment</span><span class="tag">Ski &amp; lifestyle</span></div>
+          <div class="cols"><button type="button" data-open="look-pm" data-col="reel-pm-femme" data-genre="femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-pm" data-col="reel-pm-homme" data-genre="homme" aria-haspopup="dialog">Collection homme</button></div></li>
+        <li class="has-look"><div class="row"><span class="origin">Allemagne</span><span class="name">Bogner</span><span class="tag">Luxe sportif</span></div>
+          <div class="cols"><button type="button" data-open="look-bogner" data-col="reel-bogner-vf" data-genre="femme" data-label="La collection femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-vh" data-genre="homme" data-label="La collection homme" aria-haspopup="dialog">Collection homme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-femme" data-genre="femme" data-label="Les chaussures femme" aria-haspopup="dialog">Chaussures femme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-homme" data-genre="homme" data-label="Les chaussures homme" aria-haspopup="dialog">Chaussures homme</button></div></li>
+        <li><span class="origin">Italie</span><span class="name">Colmar</span><span class="tag">Technique &amp; style</span></li>
+        <li><span class="origin">France</span><span class="name">Lacoste</span><span class="tag">Élégance sportive</span></li>
+        <li><span class="origin">France</span><span class="name">From Future</span><span class="tag">Maille cachemire</span></li>
+        <li><span class="origin">Californie</span><span class="name">UGG</span><span class="tag">Bottes &amp; après-ski</span></li>
+        <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques &amp; lunettes</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ambiance" aria-label="Ambiance de la boutique">
+    <div class="wrap grid">
+      <div class="intro">
+        <span class="eyebrow">L'esprit Milou</span>
+        <h2>Un chalet <em>en habit de fête</em></h2>
+        <p>Bois blond, blanc et touches dorées : à chaque saison, la boutique se pare de détails choisis avec le même soin que nos collections.</p>
+      </div>
+      <figure class="photo offset">
+        <img src="img/couronne.jpg" width="900" height="1200" alt="Couronne de sapin ornée de fleurs ivoire, de pommes de pin et de boules dorées sur la porte blanche" loading="lazy">
+        <figcaption>La couronne de l'entrée</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="img/sapin.jpg" width="900" height="1200" alt="Sapin décoré de boules dorées, champagne et ivoire" loading="lazy">
+        <figcaption>Le sapin de la boutique</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="univers" id="univers">
+    <div class="wrap">
+      <span class="eyebrow">Univers</span>
+      <h2>Du premier virage <em>au dernier verre</em></h2>
+      <div class="trio">
+        <article class="card" data-n="I">
+          <div class="bar"></div>
+          <span class="eyebrow">Sur les pistes</span>
+          <h3>Ski</h3>
+          <p>Vestes, pantalons et combinaisons techniques aux finitions couture, pensés pour le froid sec du glacier.</p>
+        </article>
+        <article class="card" data-n="II">
+          <div class="bar"></div>
+          <span class="eyebrow">En terrasse</span>
+          <h3>Après-ski</h3>
+          <p>Doudounes, maille cachemire et bottes fourrées pour les fins de journée au soleil et les soirées au chalet.</p>
+        </article>
+        <article class="card" data-n="III">
+          <div class="bar"></div>
+          <span class="eyebrow">En toutes saisons</span>
+          <h3>Mode</h3>
+          <p>Prêt-à-porter et accessoires des créateurs de la boutique, à porter en station comme en ville.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="location" id="location">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Location de skis</span>
+          <h2 style="margin-top:18px">Votre matériel, <em>prêt à glisser</em></h2>
+        </div>
+        <p>Skis, snowboards, chaussures et casques entretenus chaque jour à l'atelier. Réservez à l'avance : votre équipement réglé à votre mesure vous attend à l'arrivée.</p>
+      </div>
+      <div class="gammes">
+        <article class="gamme star">
+          <span class="lvl">Excellence</span>
+          <h3>Ski Premium</h3>
+          <p>Les modèles haut de gamme de la saison, pour skieurs confirmés et experts, sur piste comme hors-piste.</p>        </article>
+        <article class="gamme">
+          <span class="lvl">Performance</span>
+          <h3>Ski Sport</h3>
+          <p>Des skis polyvalents et précis pour progresser et profiter de tout le domaine.</p>        </article>
+        <article class="gamme">
+          <span class="lvl">Découverte</span>
+          <h3>Ski Confort</h3>
+          <p>Un matériel facile et tolérant pour les débutants et les skieurs occasionnels.</p>        </article>
+        <article class="gamme">
+          <span class="lvl">Glisse</span>
+          <h3>Snowboard</h3>
+          <p>Planches freeride et all-mountain, boots et fixations ajustées sur place.</p>        </article>
+        <article class="gamme">
+          <span class="lvl">Juniors</span>
+          <h3>Enfants</h3>
+          <p>Skis, chaussures et casques adaptés à chaque âge, du jardin des neiges aux premières pistes rouges.</p>        </article>
+        <article class="gamme">
+          <span class="lvl">Équipement</span>
+          <h3>Chaussures &amp; casques</h3>
+          <p>Chaussures thermoformables, casques et masques, à louer seuls ou avec vos skis.</p>        </article>
+      </div>
+      <div class="rent-foot">
+        <ul class="perks">
+          <li>Réglage des fixations sur mesure</li>
+          <li>Entretien quotidien à l'atelier</li>
+          <li>Échange de matériel en cours de séjour</li>
+        </ul>
+        <a href="https://location-ski.sport2000.fr/magasins/1296-sport-2000-milou-sports?at_medium=cta&amp;at_campaign=google_local&amp;at_creation=gmb" target="_blank" rel="noopener" class="btn solid">Réserver ma location</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="wrap">
+      <span class="eyebrow">Services</span>
+      <h2 style="margin-top:18px">Un accueil <em>sur mesure</em></h2>
+      <div class="grid">
+        <div class="svc"><h3>Conseil personnalisé</h3><p>Un regard attentif sur votre pratique, votre morphologie et votre style.</p></div>
+        <div class="svc"><h3>Rendez-vous privé</h3><p>La boutique vous accueille en dehors des heures d'affluence, sur réservation.</p></div>
+        <div class="svc"><h3>Pré-sélection</h3><p>Indiquez vos tailles et envies avant votre arrivée, nous préparons une sélection.</p></div>
+        <div class="svc"><h3>Emballage cadeau</h3><p>Chaque achat peut être présenté dans un écrin signé Milou Sports.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap grid">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-soft)">Nous trouver</span>
+        <h2 style="margin-top:18px">Venez nous <em>rendre visite</em></h2>
+        <a href="#contact" class="btn">Réserver un rendez-vous</a>
+        <figure class="photo">
+          <img src="img/entree.jpg" width="1100" height="1741" alt="L'entrée de Milou Sports avec son enseigne lumineuse, avenue de la Muzelle" loading="lazy">
+          <figcaption>126 avenue de la Muzelle</figcaption>
+        </figure>
+      </div>
+      <div>
+        <h4>Adresse</h4>
+        <p>Milou Sports<br>126 avenue de la Muzelle<br>38860 Les Deux Alpes</p>
+        <h4 style="margin-top:28px">Contact</h4>
+        <p><a href="tel:+33476805042">04 76 80 50 42</a><br><a href="mailto:milousports@gmail.com">milousports@gmail.com</a><br><a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener">Instagram · @milou_sports</a></p>
+      </div>
+      <div>
+        <h4>Horaires de saison</h4>
+        <ul>
+          <li><span>Tous les jours</span><span>8h30 – 19h30</span></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.85rem">Ouverture de la saison d'hiver le 27 novembre 2026</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Milou Sports</span><span><a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener" style="text-decoration:none">@milou_sports</a> · Les Deux Alpes · Isère</span></div>
+</footer>
+
+<dialog class="look" id="look-fusalp" aria-labelledby="look-fusalp-title">
+  <div class="look-top">
+    <span class="logo">Milou <span>·</span> Sports</span>
+    <button type="button" class="look-close" data-close>Fermer <span aria-hidden="true">×</span></button>
+  </div>
+  <div class="look-body">
+    <div class="wrap look-head">
+      <div>
+        <span class="eyebrow" id="look-eyebrow">Fusalp · Hiver 2026-2027</span>
+        <h2 id="look-fusalp-title">La collection <span data-genre-text>femme</span> <em>en avant-première</em></h2>
+      </div>
+      <p>Un aperçu des pièces Fusalp de cette saison à retrouver dans votre boutique.<span class="only">Non vendues en ligne · disponibles uniquement en boutique</span></p>
+    </div>
+    <div class="reel" id="reel-fusalp" aria-label="Photos de la collection Fusalp femme" tabindex="0">
+          <figure><img src="img/fusalp-nuage.jpg" alt="Doudoune ceinturée bleu ciel portée avec pantalon de ski assorti" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune ceinturée</b><span>Coloris Nuage</span></figcaption></figure>
+          <figure><img src="img/fusalp-falcon.jpg" alt="Blouson taupe à devant duveteux et manches en maille côtelée, chapka assortie" loading="lazy" width="900" height="1200"><figcaption><b>Blouson poils et maille</b><span>Coloris Falcon</span></figcaption></figure>
+          <figure><img src="img/fusalp-rose.jpg" alt="Doudoune rose à bandes noir et blanc sur la manche et capuche en maille" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune à bandes</b><span>Rose poudré</span></figcaption></figure>
+          <figure><img src="img/fusalp-atmo.jpg" alt="Veste à poils longs beige à capuche" loading="lazy" width="900" height="1200"><figcaption><b>Veste à capuche</b><span>Coloris Atmo</span></figcaption></figure>
+          <figure><img src="img/fusalp-combi.jpg" alt="Doudoune courte taupe et pantalon de ski noir à chevrons blancs" loading="lazy" width="900" height="1200"><figcaption><b>Tenue de ski</b><span>Taupe et noir</span></figcaption></figure>
+          <figure><img src="img/f-veste-rayee.jpg" alt="Veste zippée rose à bandes noir et blanc, bonnet et masque assortis" loading="lazy" width="900" height="1200"><figcaption><b>Veste zippée à bandes</b><span>Rose poudré</span></figcaption></figure>
+          <figure><img src="img/f-blouson-blanc.jpg" alt="Blouson blanc à col douillet et empiècements duveteux" loading="lazy" width="900" height="1200"><figcaption><b>Blouson bimatière</b><span>Blanc neige</span></figcaption></figure>
+          <figure><img src="img/f-capuche-blanche.jpg" alt="Doudoune blanche à grande capuche douillette" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune à capuche</b><span>Blanc neige</span></figcaption></figure>
+          <figure><img src="img/f-veste-falcon.jpg" alt="Veste stretch zippée taupe à passe-pouces" loading="lazy" width="900" height="1200"><figcaption><b>Veste stretch zippée</b><span>Coloris Falcon</span></figcaption></figure>
+          <figure><img src="img/f-souspull-porte.jpg" alt="Sous-pull zippé bleu ciel porté" loading="lazy" width="900" height="1200"><figcaption><b>Sous-pull zippé</b><span>Bleu ciel</span></figcaption></figure>
+          <figure><img src="img/f-souspull.jpg" alt="Sous-pull demi-zip bleu ciel, vue de face" loading="lazy" width="900" height="1200"><figcaption><b>Sous-pull demi-zip</b><span>Bleu ciel</span></figcaption></figure>
+          <figure><img src="img/f-moufles.jpg" alt="Moufles taupe en matière douillette et cuir noir" loading="lazy" width="900" height="1200"><figcaption><b>Moufles douillettes</b><span>Coloris Falcon</span></figcaption></figure>
+          <figure><img src="img/f-bonnet-rose.jpg" alt="Bonnet en grosse maille côtelée rose à écusson" loading="lazy" width="900" height="1200"><figcaption><b>Bonnet côtelé</b><span>Rose poudré</span></figcaption></figure>
+          <figure><img src="img/f-bonnet-taupe.jpg" alt="Bonnet en grosse maille côtelée taupe à écusson" loading="lazy" width="900" height="1200"><figcaption><b>Bonnet côtelé</b><span>Taupe foncé</span></figcaption></figure>
+    </div>
+    <div class="reel" id="reel-fusalp-homme" aria-label="Photos de la collection Fusalp homme" tabindex="0" hidden>
+          <figure><img src="img/h-ski-look.jpg" alt="Veste de ski bleu marine à zip tricolore, sous-pull blanc et pantalon assorti" loading="lazy" width="900" height="1200"><figcaption><b>Tenue de ski</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/h-doudoune-taupe.jpg" alt="Doudoune taupe à capuche et zips contrastés" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune à capuche</b><span>Taupe</span></figcaption></figure>
+          <figure><img src="img/h-pull-porte.jpg" alt="Pull col camionneur blanc à bandes marine et rouge sur la manche" loading="lazy" width="900" height="1200"><figcaption><b>Pull zippé à bandes</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/h-sherpa-porte.jpg" alt="Veste sherpa écrue à capuche, bonnet et masque de ski" loading="lazy" width="900" height="1200"><figcaption><b>Veste sherpa</b><span>Écru et noir</span></figcaption></figure>
+          <figure><img src="img/h-hybride-porte.jpg" alt="Veste bleu marine matelassée devant et maille sur les manches" loading="lazy" width="900" height="1200"><figcaption><b>Veste hybride</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/h-pantalon-ski.jpg" alt="Pantalon de ski noir à bretelles et sous-pull blanc" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon de ski à bretelles</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/h-veste-detail.jpg" alt="Détail de la veste de ski noire, zip étanche et col siglé" loading="lazy" width="900" height="1200"><figcaption><b>Veste de ski technique</b><span>Noir et bleu</span></figcaption></figure>
+          <figure><img src="img/h-doudoune-noire.jpg" alt="Doudoune noire à capuche doublée sherpa" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune doublée sherpa</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/h-gilet.jpg" alt="Doudoune sans manches bleu marine à surpiqûres en chevrons" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune sans manches</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/h-casquette.jpg" alt="Casquette en laine bleu marine à écusson" loading="lazy" width="900" height="1200"><figcaption><b>Casquette en laine</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/h-pantalon.jpg" alt="Pantalon bleu marine à pinces" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon de jogging</b><span>Bleu marine</span></figcaption></figure>
+    </div>
+    <div class="wrap look-foot">
+      <span>Disponible uniquement en boutique · 126 avenue de la Muzelle, Les Deux Alpes.</span>
+      <div class="reel-nav">
+        <button type="button" data-scroll="-1" aria-label="Photo précédente">←</button>
+        <button type="button" data-scroll="1" aria-label="Photo suivante">→</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="look" id="look-pm" aria-labelledby="look-pm-title">
+  <div class="look-top">
+    <span class="logo">Milou <span>·</span> Sports</span>
+    <button type="button" class="look-close" data-close>Fermer <span aria-hidden="true">×</span></button>
+  </div>
+  <div class="look-body">
+    <div class="wrap look-head">
+      <div>
+        <span class="eyebrow">Perfect Moment · Hiver 2026-2027</span>
+        <h2 id="look-pm-title">La collection <span data-genre-text>femme</span> <em>en avant-première</em></h2>
+      </div>
+      <p>Un aperçu des pièces Perfect Moment de cette saison à retrouver dans votre boutique.<span class="only">Non vendues en ligne · disponibles uniquement en boutique</span></p>
+    </div>
+    <div class="reel" id="reel-pm-femme" tabindex="0" aria-label="Photos de la collection Perfect Moment femme">
+          <figure><img src="img/pm-f-doudoune-bordeaux.jpg" alt="Doudoune courte à motif graphique bordeaux, cuivre et blanc" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune graphique</b><span>Bordeaux et blanc</span></figcaption></figure>
+          <figure><img src="img/pm-f-ensemble-leopard.jpg" alt="Doudoune et pantalon de ski à imprimé léopard des neiges noir et blanc" loading="lazy" width="900" height="1200"><figcaption><b>Ensemble de ski</b><span>Snow Leopard</span></figcaption></figure>
+          <figure><img src="img/pm-f-pantalon-bordeaux.jpg" alt="Pantalon de ski évasé bordeaux et pull noir et blanc « Après »" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon de ski évasé</b><span>Bordeaux</span></figcaption></figure>
+          <figure><img src="img/pm-f-cape.jpg" alt="Doudoune cape longue à motif pied-de-poule ton sur ton, cintrée à la taille" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune cape</b><span>Pied-de-poule noir</span></figcaption></figure>
+          <figure><img src="img/pm-f-doudoune-pdp.jpg" alt="Doudoune courte à capuche, pied-de-poule noir ton sur ton" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune à capuche</b><span>Pied-de-poule noir</span></figcaption></figure>
+          <figure><img src="img/pm-f-fourrure.jpg" alt="Veste noire à poils doux et capuche, portée avec un cabas matelassé" loading="lazy" width="900" height="1200"><figcaption><b>Veste douillette à capuche</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/pm-f-doudoune-sm.jpg" alt="Doudoune sans manches écrue et écharpe en maille rose" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune sans manches</b><span>Écru</span></figcaption></figure>
+          <figure><img src="img/pm-f-gilet-maille.jpg" alt="Gilet zippé en maille à motif pied-de-poule et rayures bleu, blanc, rouge" loading="lazy" width="900" height="1200"><figcaption><b>Gilet zippé jacquard</b><span>Bleu, blanc, rouge</span></figcaption></figure>
+          <figure><img src="img/pm-f-pull-noir-blanc.jpg" alt="Pull col roulé en grosse maille noir et écru à motif graphique" loading="lazy" width="900" height="1200"><figcaption><b>Pull col roulé</b><span>Noir et écru</span></figcaption></figure>
+          <figure><img src="img/pm-f-pull-v.jpg" alt="Pull col V en maille douce, dégradé camel, beige et rouge" loading="lazy" width="900" height="1200"><figcaption><b>Pull col V</b><span>Camel et rouge</span></figcaption></figure>
+          <figure><img src="img/pm-f-pull-zip.jpg" alt="Pull écru à col zippé côtelé et étoile brodée" loading="lazy" width="900" height="1200"><figcaption><b>Pull col zippé</b><span>Écru</span></figcaption></figure>
+          <figure><img src="img/pm-f-pantalon-noir.jpg" alt="Pantalon fuseau noir taille haute" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon fuseau</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/pm-f-legging.jpg" alt="Legging en maille côtelée blanche" loading="lazy" width="900" height="1200"><figcaption><b>Legging côtelé</b><span>Blanc</span></figcaption></figure>
+          <figure><img src="img/pm-f-chapka.jpg" alt="Chapka noire à poils longs" loading="lazy" width="900" height="1200"><figcaption><b>Chapka douillette</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/pm-f-bonnet-etoile.jpg" alt="Bonnet en maille à grande étoile sur motif léopard des neiges" loading="lazy" width="900" height="1200"><figcaption><b>Bonnet étoile</b><span>Snow Leopard</span></figcaption></figure>
+          <figure><img src="img/pm-f-banane.jpg" alt="Sac banane matelassé à chevrons bordeaux et étoile brodée" loading="lazy" width="900" height="1200"><figcaption><b>Sac banane</b><span>Bordeaux</span></figcaption></figure>
+    </div>
+    <div class="reel" id="reel-pm-homme" tabindex="0" aria-label="Photos de la collection Perfect Moment homme" hidden>
+          <figure><img src="img/pm-h-veste-noire.jpg" alt="Veste matelassée noire à col montant, portée avec un pantalon en velours" loading="lazy" width="900" height="1200"><figcaption><b>Veste matelassée</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/pm-h-veste-velours.jpg" alt="Doudoune en velours côtelé camel à poches plaquées" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune en velours côtelé</b><span>Camel</span></figcaption></figure>
+          <figure><img src="img/pm-h-pantalon-velours.jpg" alt="Pantalon de ski en velours côtelé camel à bandes noires" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon de ski en velours</b><span>Camel et noir</span></figcaption></figure>
+    </div>
+    <div class="wrap look-foot">
+      <span>Disponible uniquement en boutique · 126 avenue de la Muzelle, Les Deux Alpes.</span>
+      <div class="reel-nav">
+        <button type="button" data-scroll="-1" aria-label="Photo précédente">←</button>
+        <button type="button" data-scroll="1" aria-label="Photo suivante">→</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="look" id="look-bogner" aria-labelledby="look-bogner-title">
+  <div class="look-top">
+    <span class="logo">Milou <span>·</span> Sports</span>
+    <button type="button" class="look-close" data-close>Fermer <span aria-hidden="true">×</span></button>
+  </div>
+  <div class="look-body">
+    <div class="wrap look-head">
+      <div>
+        <span class="eyebrow">Bogner · Hiver 2026-2027</span>
+        <h2 id="look-bogner-title"><span data-label-text>La collection femme</span> <em>en avant-première</em></h2>
+      </div>
+      <p>Un aperçu des pièces Bogner de cette saison à retrouver dans votre boutique.<span class="only">Non vendues en ligne · disponibles uniquement en boutique</span></p>
+    </div>
+    <div class="reel" id="reel-bogner-vf" tabindex="0" aria-label="Photos de la collection Bogner femme">
+          <figure><img src="img/bg-v-trixie.jpg" alt="Veste à capuche en laine double face camel, portée avec un pantalon fuseau blanc" loading="lazy" width="900" height="1200"><figcaption><b>Veste réversible Trixie</b><span>Camel</span></figcaption></figure>
+          <figure><img src="img/bg-v-chevrons.jpg" alt="Doudoune beige à chevrons en bouclette écrue et bandes taupe" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune à chevrons bouclette</b><span>Beige et écru</span></figcaption></figure>
+          <figure><img src="img/bg-v-denim.jpg" alt="Veste de ski en denim brut à col en peau lainée et finitions dorées" loading="lazy" width="900" height="1200"><figcaption><b>Veste de ski en denim</b><span>Denim et col bouclette</span></figcaption></figure>
+          <figure><img src="img/bg-v-doudoune-marine.jpg" alt="Doudoune oversize bleu marine à empiècement tweed et capuche, portée" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune en tweed</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/bg-v-doudoune-camel.jpg" alt="Doudoune camel satinée à capuche et matelassage en chevrons" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune matelassée</b><span>Camel</span></figcaption></figure>
+          <figure><img src="img/bg-v-bouclette.jpg" alt="Doudoune blanc cassé en bouclette à chevrons et capuche" loading="lazy" width="900" height="1200"><figcaption><b>Doudoune bouclette à capuche</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/bg-v-gilet-fourrure.jpg" alt="Gilet sans manches à capuche en matière douillette taupe" loading="lazy" width="900" height="1200"><figcaption><b>Gilet à capuche douillet</b><span>Taupe</span></figcaption></figure>
+          <figure><img src="img/bg-v-teddy.jpg" alt="Veste teddy crème ceinturée à liseré kaki" loading="lazy" width="900" height="1200"><figcaption><b>Veste teddy Kimberly</b><span>Crème</span></figcaption></figure>
+          <figure><img src="img/bg-v-gilet-teddy.jpg" alt="Gilet sans manches en teddy blanc cassé, zip siglé" loading="lazy" width="900" height="1200"><figcaption><b>Gilet teddy</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/bg-v-veste-jersey.jpg" alt="Veste zippée en jersey blanc cassé à col montant" loading="lazy" width="900" height="1200"><figcaption><b>Veste zippée en jersey</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/bg-v-pull-gris.jpg" alt="Pull col camionneur zippé en grosse maille côtelée grise" loading="lazy" width="900" height="1200"><figcaption><b>Pull col camionneur</b><span>Gris chiné</span></figcaption></figure>
+          <figure><img src="img/bg-v-jogging.jpg" alt="Pantalon de jogging blanc cassé à cordon et chevilles froncées" loading="lazy" width="900" height="1200"><figcaption><b>Pantalon de jogging</b><span>Blanc cassé</span></figcaption></figure>
+    </div>
+    <div class="reel" id="reel-bogner-vh" tabindex="0" aria-label="Photos de la collection Bogner homme" hidden>
+          <figure><img src="img/bg-m-teryl.jpg" alt="Blouson en laine vierge camel à col en peau lainée, porté" loading="lazy" width="900" height="1200"><figcaption><b>Blouson en laine vierge Teryl</b><span>Camel</span></figcaption></figure>
+          <figure><img src="img/bg-m-gaston.jpg" alt="Veste zippée en polaire noisette à poches plaquées et col rayé" loading="lazy" width="900" height="1200"><figcaption><b>Veste intermédiaire Gaston</b><span>Hazel</span></figcaption></figure>
+          <figure><img src="img/bg-m-jacquard.jpg" alt="Veste zippée en maille jacquard bleu marine à motif siglé" loading="lazy" width="900" height="1200"><figcaption><b>Veste zippée jacquard</b><span>Bleu marine</span></figcaption></figure>
+          <figure><img src="img/bg-m-curtiz.jpg" alt="Veste zippée noire bimatière à poches zippées" loading="lazy" width="900" height="1200"><figcaption><b>Veste intermédiaire Curtiz</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/bg-m-walker.jpg" alt="Sweat à capuche demi-zip blanc cassé, porté avec un jean brut" loading="lazy" width="900" height="1200"><figcaption><b>Sweat à capuche Walker</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/bg-m-souspull.jpg" alt="Sous-pull technique demi-zip bleu ciel siglé" loading="lazy" width="900" height="1200"><figcaption><b>Sous-pull technique demi-zip</b><span>Bleu ciel</span></figcaption></figure>
+          <figure><img src="img/bg-m-tshirt-ml.jpg" alt="T-shirt manches longues en coton blanc cassé, porté" loading="lazy" width="900" height="1200"><figcaption><b>T-shirt manches longues</b><span>Blanc cassé</span></figcaption></figure>
+          <figure><img src="img/bg-m-tshirt.jpg" alt="T-shirt bleu marine à monogramme ton sur ton, porté" loading="lazy" width="900" height="1200"><figcaption><b>T-shirt</b><span>Bleu marine</span></figcaption></figure>
+    </div>
+    <div class="reel" id="reel-bogner-femme" tabindex="0" hidden aria-label="Photos des chaussures Bogner femme">
+          <figure><img src="img/bg-f-vaduz.jpg" alt="Bottes à lacets en daim beige à revers bouclette, crochets dorés et semelle crantée" loading="lazy" width="900" height="1200"><figcaption><b>Bottes à lacets Vaduz</b><span>Daim beige</span></figcaption></figure>
+          <figure><img src="img/bg-f-vaduz-semelle.jpg" alt="Vue de dessus et semelle des bottes Vaduz avec crampons rouges dépliables" loading="lazy" width="900" height="1200"><figcaption><b>Bottes Vaduz, crampons intégrés</b><span>Semelle antidérapante</span></figcaption></figure>
+          <figure><img src="img/bg-f-stmoritz.jpg" alt="Bottes à lacets en cuir noir doublées, œillets et monogramme dorés" loading="lazy" width="900" height="1200"><figcaption><b>Bottes à lacets St. Moritz</b><span>Cuir noir</span></figcaption></figure>
+          <figure><img src="img/bg-f-chamonix-noir.jpg" alt="Bottes de neige noires en bouclette et cuir, laçage noué" loading="lazy" width="900" height="1200"><figcaption><b>Bottes de neige Chamonix</b><span>Noir</span></figcaption></figure>
+          <figure><img src="img/bg-f-chamonix-blanc.jpg" alt="Bottes de neige blanc cassé en bouclette et daim, détails dorés" loading="lazy" width="900" height="1200"><figcaption><b>Bottes de neige Chamonix</b><span>Blanc cassé</span></figcaption></figure>
+    </div>
+    <div class="reel" id="reel-bogner-homme" tabindex="0" hidden aria-label="Photos des chaussures Bogner homme">
+          <figure><img src="img/bg-h-courchevel.jpg" alt="Bottes à lacets en cuir grainé noir, sangle siglée et semelle crantée rayée" loading="lazy" width="900" height="1200"><figcaption><b>Bottes à lacets Courchevel</b><span>Cuir noir</span></figcaption></figure>
+          <figure><img src="img/bg-h-helsinki.jpg" alt="Bottes de randonnée en cuir grainé et daim marron foncé, doublure douillette" loading="lazy" width="900" height="1200"><figcaption><b>Bottes Helsinki</b><span>Cuir et daim marron foncé</span></figcaption></figure>
+          <figure><img src="img/bg-h-helsinki-semelle.jpg" alt="Semelle des bottes Helsinki avec crampons rouges dépliables pour la neige et la glace" loading="lazy" width="900" height="1200"><figcaption><b>Bottes Helsinki, crampons intégrés</b><span>Semelle antidérapante</span></figcaption></figure>
+    </div>
+    <div class="wrap look-foot">
+      <span>Disponible uniquement en boutique · 126 avenue de la Muzelle, Les Deux Alpes.</span>
+      <div class="reel-nav">
+        <button type="button" data-scroll="-1" aria-label="Photo précédente">←</button>
+        <button type="button" data-scroll="1" aria-label="Photo suivante">→</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+
+
+<script>
+(function(){
+  var lastBtn=null;
+  function showCol(d,reelId,genre){
+    d.querySelectorAll('.reel').forEach(function(r){r.hidden=r.id!==reelId;if(!r.hidden)r.scrollLeft=0;});
+    d.querySelectorAll('[data-genre-text]').forEach(function(e){e.textContent=genre;});
+  }
+  function open(id,btn,reelId,genre,label){var d=document.getElementById(id);if(!d)return;showCol(d,reelId||d.querySelector('.reel').id,genre||'femme');d.querySelectorAll('[data-label-text]').forEach(function(e){e.textContent=label||('La collection '+(genre||'femme'));});lastBtn=btn||null;if(d.showModal){d.showModal()}else{d.setAttribute('open','')}document.documentElement.classList.add('lock');}
+  function close(d){if(d.close){d.close()}else{d.removeAttribute('open')}}
+  document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){open(b.dataset.open,b,b.dataset.col,b.dataset.genre,b.dataset.label)})});
+  document.querySelectorAll('dialog.look').forEach(function(d){
+    d.addEventListener('close',function(){document.documentElement.classList.remove('lock');if(lastBtn)lastBtn.focus()});
+    d.addEventListener('click',function(e){if(e.target===d)close(d)});
+    d.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){close(d)})});
+    d.querySelectorAll('[data-scroll]').forEach(function(b){b.addEventListener('click',function(){
+      var reel=d.querySelector('.reel:not([hidden])');if(!reel)return;
+      var f=reel.querySelector('figure');var step=f?f.getBoundingClientRect().width+20:300;
+      reel.scrollBy({left:step*Number(b.dataset.scroll),behavior:'smooth'});
+    })});
+  });
+  var h=location.hash;
+  if(h==='#fusalp')open('look-fusalp',null,'reel-fusalp','femme');
+  if(h==='#fusalp-homme')open('look-fusalp',null,'reel-fusalp-homme','homme');
+  if(h==='#perfect-moment')open('look-pm',null,'reel-pm-femme','femme');
+  if(h==='#bogner')open('look-bogner',null,'reel-bogner-vf','femme');
+  if(h==='#bogner-homme')open('look-bogner',null,'reel-bogner-vh','homme');
+  if(h==='#perfect-moment-homme')open('look-pm',null,'reel-pm-homme','homme');
+})();
+</script>
+
+</body></html>
