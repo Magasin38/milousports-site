@@ -22,7 +22,7 @@
   "alternateName": "Sport 2000 Milou Sports",
   "description": "Location de ski, snowboard, chaussures et casques aux Deux Alpes, à 200 m du télésiège du Diable et des caisses des remontées mécaniques. Atelier visible en vitrine, skis entretenus après chaque sortie, garde de skis en boutique, livraison de skis à domicile. Location possible directement sur place grâce à un grand parc de matériel. Équipe de passionnés avec plus de 30 ans d'expérience. Boutique de vêtements de ski et de mode montagne.",
   "url": "https://milousports.fr/",
-  "image": ["https://milousports.fr/img/facade-nuit.jpg", "https://milousports.fr/img/entree.jpg"],
+  "image": ["https://milousports.fr/img/facade-nuit.jpg", "https://milousports.fr/img/entree.jpg", "https://milousports.fr/img/atelier-1.jpg", "https://milousports.fr/img/atelier-4.jpg"],
   "telephone": "+33 4 76 80 50 42",
   "email": "milousports@gmail.com",
   "address": {
@@ -236,6 +236,62 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 @media (max-width:900px){.services .grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.services .grid{grid-template-columns:1fr}}
 
+/* L'Atelier by Milou : bande bois sombre, lueur rouge du néon */
+.atelier{--a-bg:#1A1411;--a-fg:#F3ECE2;--a-muted:#B7A996;--a-neon:#E8434B;--a-line:rgba(201,174,126,.22);background:var(--a-bg);color:var(--a-fg);padding-block:clamp(72px,10vw,130px);position:relative;overflow:hidden}
+.atelier::before{content:"";position:absolute;inset:-20% auto auto -10%;width:60%;height:70%;background:radial-gradient(closest-side,rgba(232,67,75,.16),transparent);pointer-events:none}
+.atelier .top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center;position:relative}
+.atelier .top>*{min-width:0}
+.atelier .eyebrow{color:var(--gold-soft)}
+.atelier h2{color:var(--a-fg);margin-top:18px}
+.atelier h2 em{color:var(--gold-soft)}
+.atelier .lede{margin-top:26px;font-family:var(--display);font-size:1.35rem;line-height:1.5;color:var(--a-fg)}
+.atelier .body{margin-top:18px;color:var(--a-muted)}
+.atelier .neon img{aspect-ratio:4/5;object-position:30% 50%;background:#000}
+.atelier .neon.framed::after{border-color:rgba(232,67,75,.45)}
+.atelier .skills{list-style:none;margin:30px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.atelier .skills li{padding-block:12px;border-top:1px solid var(--a-line);font-size:.92rem;color:var(--a-fg)}
+.atelier .skills li::before{content:"◆";color:var(--a-neon);font-size:.55rem;margin-right:10px;vertical-align:2px}
+.atelier .geste{margin-top:clamp(56px,8vw,96px);position:relative}
+.atelier .geste-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid var(--a-line);margin-bottom:clamp(24px,3vw,36px)}
+.atelier .geste-head h3{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--a-fg)}
+.atelier .geste-head p{color:var(--a-muted);font-size:.92rem;max-width:44ch}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.8vw,20px)}
+.steps li{min-width:0;display:grid;gap:14px;align-content:start}
+.steps img{display:block;width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;background:#000}
+.steps .n{font-family:var(--display);font-style:italic;font-size:1.6rem;line-height:1;color:var(--a-neon);font-variant-numeric:tabular-nums}
+.steps b{display:block;font-family:var(--display);font-weight:400;font-size:1.15rem;color:var(--a-fg);margin-top:4px}
+.steps span.d{display:block;font-size:.82rem;color:var(--a-muted);margin-top:4px;line-height:1.5}
+.atelier .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:clamp(32px,5vw,48px);color:var(--a-muted);font-size:.9rem}
+.atelier .btn{border-color:var(--gold-soft);color:var(--a-fg)}
+.atelier .btn:hover{background:var(--gold-soft);color:var(--a-bg)}
+@media (max-width:900px){.atelier .top{grid-template-columns:1fr}.steps{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:clamp(200px,42vw,260px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--gold-soft) transparent}.steps li{scroll-snap-align:start}}
+@media (max-width:640px){.atelier .skills{grid-template-columns:1fr}.steps{grid-auto-columns:68vw}.atelier .lede{font-size:1.2rem}}
+
+/* Téléphone */
+@media (max-width:640px){
+  .nav{flex-wrap:wrap;row-gap:0;padding-block:14px 0}
+  .nav ul{display:flex;width:100%;overflow-x:auto;gap:24px;padding-block:10px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav ul::-webkit-scrollbar{display:none}
+  .nav ul a{white-space:nowrap;font-size:.66rem}
+  .hero{padding-block:56px 0}
+  .hero .eyebrow{margin-bottom:20px}
+  .hero p{margin-top:26px;font-size:1rem}
+  .cta{flex-direction:column;align-items:stretch;width:100%;max-width:320px}
+  .btn{padding:14px 20px;text-align:center}
+  .brands .cols{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .brands .cols button{padding:12px 6px;text-align:center;font-size:.6rem;letter-spacing:.14em}
+  .card{min-height:0;padding:28px 24px 30px}
+  .card::before{font-size:4.5rem;top:12px;right:20px}
+  .gamme{padding:22px 20px}
+  .services .grid{gap:28px}
+  .reel{grid-auto-columns:80vw;gap:12px}
+  .look-head{margin-bottom:22px}
+  .look-foot{justify-content:center;text-align:center}
+  .reel-nav{display:none}
+  .contact .grid{gap:36px}
+  footer .wrap{flex-direction:column;gap:6px}
+}
+
 /* FAQ */
 .faq{background:var(--sand);padding-block:clamp(72px,10vw,130px)}
 .faq .grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(32px,6vw,90px);align-items:start}
@@ -356,6 +412,7 @@ html.lock{overflow:hidden}
       <li><a href="#marques">Marques</a></li>
       <li><a href="#univers">Univers</a></li>
       <li><a href="#location">Location</a></li>
+      <li><a href="#atelier">L'Atelier</a></li>
       <li><a href="#faq">Questions</a></li>
       <li><a href="#contact">Nous trouver</a></li>
     </ul>
@@ -518,6 +575,46 @@ html.lock{overflow:hidden}
           <li>Échange de matériel en cours de séjour</li>
         </ul>
         <a href="https://location-ski.sport2000.fr/magasins/1296-sport-2000-milou-sports?at_medium=cta&amp;at_campaign=google_local&amp;at_creation=gmb" target="_blank" rel="noopener" class="btn solid">Réserver ma location</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="atelier" id="atelier">
+    <div class="wrap">
+      <div class="top">
+        <figure class="photo framed neon">
+          <img src="img/atelier-1.jpg" width="1000" height="1142" alt="Enseigne néon « L'Atelier by Milou » en lettres blanches à halo rouge sur un mur en lames de bois" loading="lazy">
+        </figure>
+        <div>
+          <span class="eyebrow">L'Atelier by Milou</span>
+          <h2>Vos skis entre <em>des mains expertes</em></h2>
+          <p class="lede">Parce que vos skis méritent le meilleur, notre atelier les prépare à la main, comme une pièce de collection.</p>
+          <p class="body">Visible depuis la rue à travers notre vitrine, l'atelier est entièrement dédié à votre matériel : tous les skis de location sont entretenus après chaque sortie, pour une glisse toujours parfaite.</p>
+          <ul class="skills">
+            <li>Fartage à chaud à la main</li>
+            <li>Entretien après chaque sortie</li>
+            <li>Atelier visible en vitrine</li>
+            <li>Réglage des fixations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="geste">
+        <div class="geste-head">
+          <h3>Le fartage, geste par geste</h3>
+          <p>Un fartage à chaud, fait à l'établi, pour une glisse fluide et une semelle protégée du froid sec du glacier.</p>
+        </div>
+        <ol class="steps">
+          <li><img src="img/atelier-2.jpg" width="1000" height="1142" alt="Pain de fart blanc fondu contre la semelle chaude d'un fer à farter vert" loading="lazy"><div><span class="n">1</span><b>Le fart fond</b><span class="d">Le pain de fart est fondu au contact du fer.</span></div></li>
+          <li><img src="img/atelier-3.jpg" width="1000" height="1142" alt="Gouttes de fart blanc déposées le long d'une semelle de ski bordeaux" loading="lazy"><div><span class="n">2</span><b>Le dépôt</b><span class="d">Les gouttes sont réparties sur toute la longueur de la semelle.</span></div></li>
+          <li><img src="img/atelier-4.jpg" width="1000" height="1142" alt="Deux mains guidant le fer à farter sur un ski bloqué dans l'étau" loading="lazy"><div><span class="n">3</span><b>Le fer</b><span class="d">Le fer étale le fart pour qu'il pénètre la semelle.</span></div></li>
+          <li><img src="img/atelier-5.jpg" width="1000" height="1142" alt="Raclette verte retirant l'excédent de fart d'un ski dans l'étau" loading="lazy"><div><span class="n">4</span><b>Le raclage</b><span class="d">Une fois refroidi, l'excédent est retiré à la raclette.</span></div></li>
+          <li><img src="img/atelier-6.jpg" width="1000" height="1142" alt="Brosse rotative passée sur la semelle d'un ski noir et orange" loading="lazy"><div><span class="n">5</span><b>Le brossage</b><span class="d">La brosse rotative ouvre la structure pour la glisse.</span></div></li>
+        </ol>
+        <div class="foot">
+          <span>Atelier ouvert aux horaires de la boutique · 126 avenue de la Muzelle</span>
+          <a href="https://location-ski.sport2000.fr/magasins/1296-sport-2000-milou-sports?at_medium=cta&amp;at_campaign=google_local&amp;at_creation=gmb" target="_blank" rel="noopener" class="btn">Réserver ma location</a>
+        </div>
       </div>
     </div>
   </section>
