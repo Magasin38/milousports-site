@@ -174,6 +174,17 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 .card p{color:var(--muted);font-size:.95rem}
 .card .bar{width:36px;height:1px;background:var(--gold);margin-bottom:22px;transition:width .5s}
 .card:hover .bar{width:100%}
+/* Cartes avec photo */
+.card.photo-card{background:#1A1411;border-color:transparent;color:#F3ECE2;isolation:isolate}
+.card.photo-card .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.02);transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.card.photo-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,16,12,.05) 25%,rgba(20,16,12,.78) 100%)}
+.card.photo-card::before{color:rgba(243,236,226,.55);z-index:1}
+.card.photo-card:hover .bg{transform:scale(1.08)}
+.card.photo-card h3{color:#F3ECE2}
+.card.photo-card p{color:rgba(243,236,226,.85)}
+.card.photo-card .eyebrow{color:#E2C99A}
+.card.photo-card .bar{background:#E2C99A}
+@media (max-width:900px){.card.photo-card{min-height:380px}}
 @media (max-width:900px){.trio{grid-template-columns:1fr}.card{min-height:300px}}
 
 /* Location */
@@ -462,19 +473,22 @@ html.lock{overflow:hidden}
       <span class="eyebrow">Style</span>
       <h2>From the first turn <em>to the last drink</em></h2>
       <div class="trio">
-        <article class="card" data-n="I">
+        <article class="card photo-card" data-n="I">
+          <img class="bg" src="/img/fusalp-combi.jpg" alt="Skier in a Fusalp ski outfit, taupe down jacket and black chevron trousers" loading="lazy" style="object-position:50% 25%">
           <div class="bar"></div>
           <span class="eyebrow">On the slopes</span>
           <h3>Ski</h3>
           <p>Technical jackets, trousers and ski suits with couture finishes, designed for the dry cold of the glacier.</p>
         </article>
-        <article class="card" data-n="II">
+        <article class="card photo-card" data-n="II">
+          <img class="bg" src="/img/apres-ski-terrasse.jpg" alt="Friends raising a toast on a high-altitude terrace facing snowy peaks, wearing Perfect Moment" loading="lazy" style="object-position:50% 60%">
           <div class="bar"></div>
           <span class="eyebrow">On the terrace</span>
           <h3>Après-ski</h3>
           <p>Down jackets, cashmere knitwear and fur-lined boots for sunny late afternoons and evenings at the chalet.</p>
         </article>
-        <article class="card" data-n="III">
+        <article class="card photo-card" data-n="III">
+          <img class="bg" src="/img/bg-m-walker.jpg" alt="Off-white Bogner hoodie worn with raw denim jeans" loading="lazy" style="object-position:50% 25%">
           <div class="bar"></div>
           <span class="eyebrow">All year round</span>
           <h3>Fashion</h3>
