@@ -6,6 +6,9 @@
 <title>Location snowscoot Les Deux Alpes – Centsix tout suspendu | Milou Sports</title>
 <meta name="description" content="Location de snowscoot aux Deux Alpes : snowscoots nouvelle génération tout suspendus Centsix, plusieurs gammes. Milou Sports, 126 avenue de la Muzelle, à 200 m du télésiège du Diable.">
 <link rel="canonical" href="https://milousports.fr/snowscoot-les-deux-alpes/">
+<link rel="alternate" hreflang="fr" href="https://milousports.fr/snowscoot-les-deux-alpes/">
+<link rel="alternate" hreflang="en" href="https://milousports.fr/en/snowscoot-hire-les-deux-alpes/">
+<link rel="alternate" hreflang="x-default" href="https://milousports.fr/snowscoot-les-deux-alpes/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#B08D57">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232B2620'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23C9AE7E'%3EM%3C/text%3E%3C/svg%3E">
@@ -82,7 +85,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Alex+Brush&display=swap">
 <style>
 :root{
   --ivory:#FBF9F5;--sand:#EFE8DC;--stone:#D9CFBF;--ink:#2B2620;--muted:#7A6F62;--gold:#B08D57;--gold-soft:#C9AE7E;--line:rgba(176,141,87,.35);
@@ -107,7 +110,14 @@ p{margin:0;max-width:62ch}
 
 header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--ivory) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
-.logo{font-family:var(--display);font-size:1.35rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.logo{font-family:"Alex Brush","Brush Script MT",cursive;font-size:2rem;line-height:1;letter-spacing:0;text-transform:none;text-decoration:none;white-space:nowrap}
+.lang{display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:.68rem;font-weight:500;letter-spacing:.2em}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--gold)}
+.lang [aria-current]{color:var(--gold)}
+.lang>*+*::before{content:"|";margin-right:8px;color:var(--stone)}
+.right{display:flex;align-items:center;gap:clamp(14px,3vw,28px)}
+
 .logo span{color:var(--gold)}
 .back{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
 .back:hover{color:var(--gold)}
@@ -164,7 +174,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 footer a{text-decoration:none}
 
 @media (max-width:900px){.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.contact .cols{grid-template-columns:1fr}}
-@media (max-width:640px){.logo{font-size:1.05rem;letter-spacing:.12em;white-space:nowrap}.back{font-size:.62rem;letter-spacing:.16em;white-space:nowrap}.cta{flex-direction:column;align-items:stretch;max-width:320px;margin-inline:auto}.btn{padding:14px 20px;text-align:center}footer .wrap{flex-direction:column;gap:6px}}
+@media (max-width:640px){.logo{font-size:1.6rem}.back{font-size:.62rem;letter-spacing:.16em;white-space:nowrap}.cta{flex-direction:column;align-items:stretch;max-width:320px;margin-inline:auto}.btn{padding:14px 20px;text-align:center}footer .wrap{flex-direction:column;gap:6px}}
 </style>
 </head>
 <body>
@@ -172,7 +182,10 @@ footer a{text-decoration:none}
 <header>
   <nav class="wrap nav" aria-label="Navigation principale">
     <a href="/" class="logo">Milou <span>·</span> Sports</a>
-    <a href="/" class="back">← Retour au site</a>
+    <div class="right">
+      <a href="/" class="back">← Retour au site</a>
+      <div class="lang" aria-label="Langue"><span aria-current="true">FR</span><a href="/en/snowscoot-hire-les-deux-alpes/" hreflang="en" lang="en">EN</a></div>
+    </div>
   </nav>
 </header>
 
@@ -255,7 +268,7 @@ footer a{text-decoration:none}
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Milou Sports</span><span><a href="/">milousports.fr</a> · Les Deux Alpes · Isère</span></div>
+  <div class="wrap"><span>© 2026 Milou Sports</span><span><a href="/">milousports.fr</a> · <a href="/en/snowscoot-hire-les-deux-alpes/" hreflang="en" lang="en">English</a> · Les Deux Alpes · Isère</span></div>
 </footer>
 
 </body>

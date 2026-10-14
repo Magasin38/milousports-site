@@ -2,6 +2,9 @@
 <title>Location de ski aux Deux Alpes – Milou Sports | Sport 2000</title>
 <meta name="description" content="Location de ski, snowboard et snowscoot aux Deux Alpes, à 200 m du télésiège du Diable. Atelier en vitrine, garde de skis, livraison à domicile. Réservez en ligne. Boutique Fusalp, Bogner, UGG.">
 <link rel="canonical" href="https://milousports.fr/">
+<link rel="alternate" hreflang="fr" href="https://milousports.fr/">
+<link rel="alternate" hreflang="en" href="https://milousports.fr/en/">
+<link rel="alternate" hreflang="x-default" href="https://milousports.fr/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#B08D57">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232B2620'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='40' text-anchor='middle' fill='%23C9AE7E'%3EM%3C/text%3E%3C/svg%3E">
@@ -104,7 +107,7 @@
     {"@type": "Question", "name": "Quels sont les tarifs de location ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Les tarifs varient selon les dates et la gamme choisie. Les prix à jour sont affichés sur notre page de réservation en ligne Sport 2000 Milou Sports."}},
     {"@type": "Question", "name": "Quelles marques trouve-t-on dans la boutique ?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Fusalp, Perfect Moment, Bogner, Colmar, Lacoste, From Future, UGG et Oakley (accessoires). Les pièces présentées sur le site sont disponibles uniquement en boutique, elles ne sont pas vendues en ligne."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Fusalp, Perfect Moment, Bogner, Colmar, Lacoste, From Future, UGG et Oakley (masques, lunettes et accessoires). Les pièces présentées sur le site sont disponibles uniquement en boutique, elles ne sont pas vendues en ligne."}},
     {"@type": "Question", "name": "L'équipe parle-t-elle anglais ?",
      "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'équipe vous accueille en français et en anglais."}}
   ]
@@ -147,7 +150,16 @@ p{margin:0;max-width:62ch}
 /* Header */
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--ivory) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
-.logo{font-family:var(--display);font-size:1.35rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+.logo{font-family:"Alex Brush","Brush Script MT",cursive;font-size:2rem;line-height:1;letter-spacing:0;text-transform:none;text-decoration:none;white-space:nowrap}
+.lang{display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:.68rem;font-weight:500;letter-spacing:.2em}
+.lang a{color:var(--muted);text-decoration:none}
+.lang a:hover{color:var(--gold)}
+.lang [aria-current]{color:var(--gold)}
+.lang>*+*::before{content:"|";margin-right:8px;color:var(--stone)}
+.nav ul{margin-left:auto}
+.nav .lang{order:2;margin-left:clamp(14px,3vw,36px)}
+@media (max-width:640px){.nav .lang{order:1;margin-left:auto}.nav ul{order:2;margin-left:0}}
+
 .logo span{color:var(--gold)}
 .nav ul{display:flex;gap:clamp(14px,3vw,36px);list-style:none;margin:0;padding:0}
 .nav ul a{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;color:var(--muted);transition:color .3s}
@@ -376,7 +388,7 @@ dialog.look{width:100%;max-width:100%;height:100%;max-height:100%;margin:0;paddi
 dialog.look::backdrop{background:rgba(20,17,13,.55)}
 dialog.look[open]{display:flex;flex-direction:column}
 .look-top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(env(safe-area-inset-top,0px) + 18px) clamp(16px,5vw,48px) 18px;border-bottom:1px solid var(--line)}
-.look-top .logo{font-size:1.1rem}
+.look-top .logo{font-size:1.7rem}
 .look-close{all:unset;cursor:pointer;font-size:.7rem;font-weight:500;letter-spacing:.26em;text-transform:uppercase;color:var(--ink);padding:10px 0 10px 16px;display:flex;align-items:center;gap:10px}
 .look-close span{font-size:1.4rem;line-height:1;color:var(--gold)}
 .look-close:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
@@ -425,6 +437,7 @@ html.lock{overflow:hidden}
       <li><a href="#faq">Questions</a></li>
       <li><a href="#contact">Nous trouver</a></li>
     </ul>
+    <div class="lang" aria-label="Langue"><span aria-current="true">FR</span><a href="/en/" hreflang="en" lang="en">EN</a></div>
   </nav>
 </header>
 
@@ -487,8 +500,7 @@ html.lock{overflow:hidden}
         <li><span class="origin">France</span><span class="name">Lacoste</span><span class="tag">Élégance sportive</span></li>
         <li><span class="origin">France</span><span class="name">From Future</span><span class="tag">Maille cachemire</span></li>
         <li><span class="origin">Californie</span><span class="name">UGG</span><span class="tag">Bottes &amp; après-ski</span></li>
-        <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Accessoires</span></li>
-        <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques &amp; lunettes</span></li>
+        <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques, lunettes &amp; accessoires</span></li>
       </ul>
     </div>
   </section>
@@ -667,7 +679,7 @@ html.lock{overflow:hidden}
         <details><summary>Proposez-vous une garde de skis ?</summary><p>Oui, nous gardons vos skis dans la boutique : vous repartez l'esprit léger pour vous détendre après votre journée sur les pistes.</p></details>
         <details><summary>Livrez-vous les skis à domicile ?</summary><p>Oui, la livraison de skis à domicile est possible. Contactez-nous au <a href="tel:+33476805042">04 76 80 50 42</a> pour l'organiser.</p></details>
         <details><summary>Quels sont les tarifs de location ?</summary><p>Les tarifs varient selon les dates et la gamme choisie. Les prix à jour sont affichés sur notre page de réservation en ligne.</p></details>
-        <details><summary>Quelles marques trouve-t-on dans la boutique ?</summary><p>Fusalp, Perfect Moment, Bogner, Colmar, Lacoste, From Future, UGG et Oakley (accessoires). Les pièces présentées sur le site sont disponibles uniquement en boutique, elles ne sont pas vendues en ligne.</p></details>
+        <details><summary>Quelles marques trouve-t-on dans la boutique ?</summary><p>Fusalp, Perfect Moment, Bogner, Colmar, Lacoste, From Future, UGG et Oakley (masques, lunettes et accessoires). Les pièces présentées sur le site sont disponibles uniquement en boutique, elles ne sont pas vendues en ligne.</p></details>
         <details><summary>Parlez-vous anglais ? / Do you speak English?</summary><p>Oui, l'équipe vous accueille en français et en anglais. Yes, our team welcomes you in French and English.</p></details>
       </div>
     </div>
@@ -701,7 +713,7 @@ html.lock{overflow:hidden}
 </main>
 
 <footer>
-  <div class="wrap"><span>© 2026 Milou Sports</span><span><a href="/snowscoot-les-deux-alpes/" style="text-decoration:none">Location snowscoot</a> · <a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener" style="text-decoration:none">@milou_sports</a> · Les Deux Alpes · Isère</span></div>
+  <div class="wrap"><span>© 2026 Milou Sports</span><span><a href="/snowscoot-les-deux-alpes/" style="text-decoration:none">Location snowscoot</a> · <a href="/en/" hreflang="en" lang="en" style="text-decoration:none">English</a> · <a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener" style="text-decoration:none">@milou_sports</a> · Les Deux Alpes · Isère</span></div>
 </footer>
 
 <dialog class="look" id="look-fusalp" aria-labelledby="look-fusalp-title">
