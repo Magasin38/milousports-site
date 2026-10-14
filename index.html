@@ -363,6 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .ambiance .intro p{color:var(--muted)}
 .ambiance .photo img{aspect-ratio:3/4}
 .ambiance .photo.offset{margin-bottom:clamp(0px,6vw,72px)}
+.ambiance.photos-only .grid{grid-template-columns:1fr 1fr;max-width:860px;margin-inline:auto}
 @media (max-width:820px){.ambiance .grid{grid-template-columns:1fr 1fr}.ambiance .intro{grid-column:1/-1}.ambiance .photo.offset{margin-bottom:0}}
 .contact .photo{margin-top:36px}
 .contact .photo img{aspect-ratio:4/5;object-position:50% 40%}
@@ -502,6 +503,19 @@ html.lock{overflow:hidden}
         <li><span class="origin">Californie</span><span class="name">UGG</span><span class="tag">Bottes &amp; après-ski</span></li>
         <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques, lunettes &amp; accessoires</span></li>
       </ul>
+    </div>
+  </section>
+
+  <section class="ambiance photos-only" aria-label="La boutique en hiver">
+    <div class="wrap grid">
+      <figure class="photo offset">
+        <img src="img/couronne.jpg" width="900" height="1200" alt="Couronne de sapin ornée de fleurs ivoire, de pommes de pin et de boules dorées sur la porte blanche" loading="lazy">
+        <figcaption>La couronne de l’entrée</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="img/sapin.jpg" width="900" height="1200" alt="Sapin décoré de boules dorées, champagne et ivoire" loading="lazy">
+        <figcaption>Le sapin de la boutique</figcaption>
+      </figure>
     </div>
   </section>
 
