@@ -308,6 +308,17 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 .nav-book{order:3;margin-left:clamp(14px,2vw,24px);padding:10px 18px;font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ivory);background:var(--gold);border:1px solid var(--gold);white-space:nowrap;transition:background .3s,color .3s}
 .nav-book:hover{background:transparent;color:var(--gold)}
 @media (max-width:640px){.nav-book{display:none}}
+/* En-tête ordinateur : tout tient sur une ligne */
+@media (min-width:641px){
+  .nav{flex-wrap:nowrap;gap:12px}
+  .nav ul{gap:clamp(12px,1.5vw,30px)}
+  .nav ul a{white-space:nowrap;letter-spacing:.18em}
+  .nav .lang{margin-left:clamp(10px,1.4vw,24px);white-space:nowrap}
+  .nav-book{flex:none;margin-left:clamp(10px,1.2vw,20px)}
+}
+@media (min-width:641px) and (max-width:1360px){.nav ul li:nth-child(3),.nav ul li:nth-child(6){display:none}}
+@media (min-width:641px) and (max-width:1100px){.nav ul li:nth-child(2),.nav ul li:nth-child(5){display:none}}
+@media (min-width:641px) and (max-width:860px){.nav ul{display:none}}
 .cta-band{background:var(--ink);color:var(--ivory);text-align:center;padding-block:clamp(56px,8vw,96px)}
 .cta-band .eyebrow{color:var(--gold-soft)}
 .cta-band h2{color:var(--ivory);margin:16px auto 0;max-width:20ch}
