@@ -208,6 +208,30 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 @media (max-width:900px){.card.photo-card{min-height:380px}}
 @media (max-width:900px){.trio{grid-template-columns:1fr}.card{min-height:300px}}
 
+/* Réservation : bouton vedette */
+.btn.book{position:relative;overflow:hidden;font-size:.78rem;padding:18px 40px;box-shadow:0 10px 28px -12px rgba(176,141,87,.75)}
+.btn.book::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg)}
+@media (prefers-reduced-motion:no-preference){.btn.book::after{animation:sheen 4.5s ease-in-out 1.5s infinite}}
+@keyframes sheen{0%{left:-60%}22%,100%{left:130%}}
+.btn.book .arr{display:inline-block;margin-left:10px;transition:transform .3s}
+.btn.book:hover .arr{transform:translateX(5px)}
+.reassure{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:22px auto 0;padding:0;list-style:none;font-size:.82rem;color:var(--muted)}
+.reassure li::before{content:"✓";color:var(--gold);font-weight:600;margin-right:6px}
+.nav-book{order:3;margin-left:clamp(14px,2vw,24px);padding:10px 18px;font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ivory);background:var(--gold);border:1px solid var(--gold);white-space:nowrap;transition:background .3s,color .3s}
+.nav-book:hover{background:transparent;color:var(--gold)}
+@media (max-width:640px){.nav-book{display:none}}
+.cta-band{background:var(--ink);color:var(--ivory);text-align:center;padding-block:clamp(56px,8vw,96px)}
+.cta-band .eyebrow{color:var(--gold-soft)}
+.cta-band h2{color:var(--ivory);margin:16px auto 0;max-width:20ch}
+.cta-band h2 em{color:var(--gold-soft)}
+.cta-band p{margin:18px auto 0;color:color-mix(in srgb,var(--ivory) 75%,transparent)}
+.cta-band .btn.book{margin-top:30px}
+.cta-band .tel{display:block;margin-top:18px;font-size:.85rem;color:color-mix(in srgb,var(--ivory) 70%,transparent)}
+.cta-band .tel a{color:var(--gold-soft)}
+.cta-band .reassure{color:color-mix(in srgb,var(--ivory) 70%,transparent)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta-band{background:#0F0D0A}:root:not([data-theme="light"]) .cta-band h2{color:var(--ink)}}
+:root[data-theme="dark"] .cta-band{background:#0F0D0A}
+
 /* Galerie Milou en images */
 .galerie{padding-block:clamp(72px,10vw,130px)}
 .galerie .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
@@ -435,6 +459,7 @@ html.lock{overflow:hidden}
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Find us</a></li>
     </ul>
+    <a class="nav-book" href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener">Book</a>
     <div class="lang" aria-label="Language"><a href="/" hreflang="fr" lang="fr">FR</a><span aria-current="true">EN</span></div>
   </nav>
 </header>
@@ -446,9 +471,10 @@ html.lock{overflow:hidden}
       <h1><span class="script">Milou</span><span class="amp">ski &amp; alpine elegance</span></h1>
       <p>A luxury ski shop and a curated selection of premium ski and fashion labels, chosen for those who live the mountains in style, from the glacier slopes to the sunny high-altitude terraces.</p>
       <div class="cta">
-        <a href="#marques" class="btn solid">Discover the brands</a>
-        <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn ghost">Book my ski hire</a>
+        <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn solid book">Book my ski hire<span class="arr" aria-hidden="true">→</span></a>
+        <a href="#marques" class="btn ghost">Discover the brands</a>
       </div>
+      <ul class="reassure"><li>Equipment fitted to you</li><li>Ready when you arrive</li><li>200 m from the Diable chairlift</li></ul>
     </div>
     <svg class="ridge" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
       <path class="fill" d="M0 220 L0 170 L90 150 L160 160 L240 118 L300 132 L380 80 L430 96 L520 38 L575 70 L640 52 L700 90 L760 74 L840 120 L900 104 L980 140 L1060 128 L1130 156 L1200 146 L1200 220 Z"/>
@@ -609,7 +635,7 @@ html.lock{overflow:hidden}
           <li>Skis serviced after each use</li>
           <li>Equipment exchange during your stay</li>
         </ul>
-        <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn solid">Book my ski hire</a>
+        <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn solid book">Book my ski hire<span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -654,6 +680,17 @@ html.lock{overflow:hidden}
           <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn">Book my ski hire</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-label="Book your ski hire">
+    <div class="wrap">
+      <span class="eyebrow">Ski hire in Les Deux Alpes</span>
+      <h2>Book now, <em>ski light-hearted</em></h2>
+      <p>Choose your equipment online in a few clicks: it will be waiting for you, fitted to you, a short walk from the slopes.</p>
+      <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener" class="btn solid book">Book my ski hire<span class="arr" aria-hidden="true">→</span></a>
+      <ul class="reassure"><li>Blue to Diamond ranges</li><li>Exchange during your stay</li><li>Ski storage</li></ul>
+      <span class="tel">Any questions? <a href="tel:+33476805042">+33 4 76 80 50 42</a></span>
     </div>
   </section>
 
