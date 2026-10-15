@@ -90,6 +90,17 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+img{height:auto}
+/* Barre de réservation fixe sur téléphone */
+.m-bar{display:none}
+@media (max-width:640px){
+  .m-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:8px;padding:10px 12px calc(env(safe-area-inset-bottom,0px) + 10px);background:color-mix(in srgb,var(--ivory) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .m-bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:46px;font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold)}
+  .m-bar .book{flex:2;background:var(--gold);color:var(--ivory)}
+  .m-bar .call{color:var(--ink)}
+  body{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 68px)}
+  html.lock .m-bar{display:none}
+}
 body{background:var(--ivory);color:var(--ink);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,5vw,48px)}
@@ -702,6 +713,8 @@ html.lock{overflow:hidden}
     </div>
   </section>
 </main>
+
+<nav class="m-bar" aria-label="Book or call"><a class="book" href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener">Book my ski hire</a><a class="call" href="tel:+33476805042">Call</a></nav>
 
 <footer>
   <div class="wrap"><span>© 2026 Milou Sports · <a href="/en/legal-notice/" style="text-decoration:none">Legal notice</a></span><span><a href="/en/snowscoot-hire-les-deux-alpes/" style="text-decoration:none">Snowscoot hire</a> · <a href="/" hreflang="fr" style="text-decoration:none">Version française</a> · <a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener" style="text-decoration:none">@milou_sports</a> · Les Deux Alpes</span></div>
