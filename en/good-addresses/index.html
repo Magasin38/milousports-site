@@ -41,6 +41,20 @@
 .adr .map{margin-top:auto;padding-top:8px;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none}
 .adr .map:hover{text-decoration:underline}
 .adr-note{padding-block:20px 8px;text-align:center;font-size:.82rem;color:var(--muted)}
+
+/* Mode sombre : textes des sections foncées */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .contact,:root:not([data-theme="light"]) .cta-band{color:#F1EBE1}
+  :root:not([data-theme="light"]) .contact p,:root:not([data-theme="light"]) .contact li,:root:not([data-theme="light"]) .cta-band p,:root:not([data-theme="light"]) .cta-band .tel,:root:not([data-theme="light"]) .cta-band .reassure{color:rgba(241,235,225,.78)}
+  :root:not([data-theme="light"]) .contact a{color:inherit}
+  :root:not([data-theme="light"]) .contact .photo figcaption{color:rgba(241,235,225,.6)}
+  :root:not([data-theme="light"]) footer{background:#0F0D0A;color:rgba(241,235,225,.6)}
+}
+:root[data-theme="dark"] .contact,:root[data-theme="dark"] .cta-band{color:#F1EBE1}
+:root[data-theme="dark"] .contact p,:root[data-theme="dark"] .contact li,:root[data-theme="dark"] .cta-band p,:root[data-theme="dark"] .cta-band .tel,:root[data-theme="dark"] .cta-band .reassure{color:rgba(241,235,225,.78)}
+:root[data-theme="dark"] .contact a{color:inherit}
+:root[data-theme="dark"] .contact .photo figcaption{color:rgba(241,235,225,.6)}
+:root[data-theme="dark"] footer{background:#0F0D0A;color:rgba(241,235,225,.6)}
 </style>
 </head><body>
 <link rel="stylesheet" href="/fonts/fonts.css">

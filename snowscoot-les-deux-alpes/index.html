@@ -176,6 +176,20 @@ footer a{text-decoration:none}
 
 @media (max-width:900px){.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.contact .cols{grid-template-columns:1fr}}
 @media (max-width:640px){.logo{font-size:1.6rem}.back{font-size:.62rem;letter-spacing:.16em;white-space:nowrap}.cta{flex-direction:column;align-items:stretch;max-width:320px;margin-inline:auto}.btn{padding:14px 20px;text-align:center}footer .wrap{flex-direction:column;gap:6px}}
+
+/* Mode sombre : textes des sections foncées */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .contact,:root:not([data-theme="light"]) .cta-band{color:#F1EBE1}
+  :root:not([data-theme="light"]) .contact p,:root:not([data-theme="light"]) .contact li,:root:not([data-theme="light"]) .cta-band p,:root:not([data-theme="light"]) .cta-band .tel,:root:not([data-theme="light"]) .cta-band .reassure{color:rgba(241,235,225,.78)}
+  :root:not([data-theme="light"]) .contact a{color:inherit}
+  :root:not([data-theme="light"]) .contact .photo figcaption{color:rgba(241,235,225,.6)}
+  :root:not([data-theme="light"]) footer{background:#0F0D0A;color:rgba(241,235,225,.6)}
+}
+:root[data-theme="dark"] .contact,:root[data-theme="dark"] .cta-band{color:#F1EBE1}
+:root[data-theme="dark"] .contact p,:root[data-theme="dark"] .contact li,:root[data-theme="dark"] .cta-band p,:root[data-theme="dark"] .cta-band .tel,:root[data-theme="dark"] .cta-band .reassure{color:rgba(241,235,225,.78)}
+:root[data-theme="dark"] .contact a{color:inherit}
+:root[data-theme="dark"] .contact .photo figcaption{color:rgba(241,235,225,.6)}
+:root[data-theme="dark"] footer{background:#0F0D0A;color:rgba(241,235,225,.6)}
 </style>
 </head>
 <body>
