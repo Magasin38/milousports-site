@@ -189,6 +189,18 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 @media (max-width:900px){.card.photo-card{min-height:380px}}
 @media (max-width:900px){.trio{grid-template-columns:1fr}.card{min-height:300px}}
 
+/* Galerie Milou en images */
+.galerie{padding-block:clamp(72px,10vw,130px)}
+.galerie .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,56px)}
+.galerie .head p{color:var(--muted);max-width:44ch}
+.galerie .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.6vw,18px)}
+.galerie figure{margin:0;position:relative;overflow:hidden;background:var(--sand)}
+.galerie figure:nth-child(4n+2),.galerie figure:nth-child(4n+4){margin-top:clamp(0px,4vw,48px)}
+.galerie img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:.64rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#F3ECE2;background:linear-gradient(180deg,transparent,rgba(20,16,12,.6))}
+@media (max-width:820px){.galerie .grid{grid-template-columns:repeat(2,1fr)}.galerie figure:nth-child(4n+2),.galerie figure:nth-child(4n+4){margin-top:0}.galerie figure:nth-child(2n){margin-top:32px}}
+
 /* Location */
 .location{padding-block:clamp(72px,10vw,130px)}
 .location .head{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(40px,6vw,70px)}
@@ -478,7 +490,7 @@ html.lock{overflow:hidden}
       <h2>From the first turn <em>to the last drink</em></h2>
       <div class="trio">
         <article class="card photo-card" data-n="I">
-          <img class="bg" src="/img/fusalp-combi.jpg" alt="Skier in a Fusalp ski outfit, taupe down jacket and black chevron trousers" loading="lazy" style="object-position:50% 25%">
+          <img class="bg" src="/img/m-skis-devant-boutique.jpg" alt="Laughing customer in a houndstooth ski outfit holding a Salomon ski in each hand, in front of the Milou Sports shop" loading="lazy" style="object-position:50% 30%">
           <div class="bar"></div>
           <span class="eyebrow">On the slopes</span>
           <h3>Ski</h3>
@@ -498,6 +510,28 @@ html.lock{overflow:hidden}
           <h3>Fashion</h3>
           <p>Ready-to-wear and accessories from the shop's designers, to wear in the resort as well as in town.</p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="galerie" id="galerie" aria-label="Photos of the Milou Sports shop">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="eyebrow">Milou in pictures</span>
+          <h2 style="margin-top:18px">The shop, <em>behind the scenes</em></h2>
+        </div>
+        <p>Fittings, advice, skis prepared in the workshop: a glimpse of life at the shop in Les Deux Alpes.</p>
+      </div>
+      <div class="grid">
+        <figure><img src="/img/m-bonnet-bordeaux.jpg" alt="Smiling customer in a burgundy beanie and powder-pink down jacket in the shop" loading="lazy" width="1000" height="1500"><figcaption>Fittings</figcaption></figure>
+        <figure><img src="/img/m-conseil-skis.jpg" alt="Personal advice in front of the Rossignol, Atomic and Dynastar ski wall" loading="lazy" width="1000" height="1500"><figcaption>Ski advice</figcaption></figure>
+        <figure><img src="/img/m-teddy-marques.jpg" alt="Customer in a white teddy jacket and trapper hat in front of the Perfect Moment, Fusalp and Colmar brand board" loading="lazy" width="1000" height="1500"><figcaption>Our brands</figcaption></figure>
+        <figure><img src="/img/m-skiman-rossignol.jpg" alt="Smiling ski technician showing a pair of Rossignol skis" loading="lazy" width="1000" height="1500"><figcaption>Our ski technicians</figcaption></figure>
+        <figure><img src="/img/m-pull-camionneur.jpg" alt="Detail of a chunky camel half-zip knit sweater" loading="lazy" width="1000" height="1500"><figcaption>Knitwear</figcaption></figure>
+        <figure><img src="/img/m-lunettes-oakley.jpg" alt="The snowy village reflected in Oakley sunglasses" loading="lazy" width="1000" height="1500"><figcaption>Oakley</figcaption></figure>
+        <figure><img src="/img/m-gilet-perfect-moment.jpg" alt="Perfect Moment star-pattern knit cardigan, the shop reflected in the mirror" loading="lazy" width="1000" height="1500"><figcaption>Perfect Moment</figcaption></figure>
+        <figure><img src="/img/m-legging-perfect-moment.jpg" alt="Green ribbed Perfect Moment set under a glossy black down jacket" loading="lazy" width="1000" height="1500"><figcaption>Perfect Moment</figcaption></figure>
       </div>
     </div>
   </section>
