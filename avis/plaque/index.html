@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plaque avis – Milou Sports</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{--ink:#2B2620;--muted:#7A6F62;--gold:#B08D57;color-scheme:light}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;background:#E9E4DC;color:var(--ink);font:300 16px/1.5 "Jost","Helvetica Neue",Arial,sans-serif}
+.tools{max-width:900px;margin:0 auto;padding:24px 16px;text-align:center}
+.tools h1{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:1.6rem;margin:0 0 8px}
+.tools p{margin:4px auto;color:var(--muted);max-width:60ch}
+.tools button{margin:14px 6px 0;padding:12px 22px;font:500 .72rem "Jost",sans-serif;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--gold);background:var(--gold);color:#fff;cursor:pointer}
+.tools button.alt{background:transparent;color:var(--ink)}
+.sheet{display:flex;justify-content:center;padding:0 16px 48px}
+.card{background:#FBF9F5;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 20px 50px -25px rgba(0,0,0,.4);position:relative;flex:none}
+.card::before{content:"";position:absolute;inset:4%;border:1px solid var(--gold);pointer-events:none}
+.logo{font-family:"Alex Brush","Brush Script MT",cursive;line-height:1;color:var(--ink)}
+.sub{letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.title{font-family:"Bodoni Moda",Georgia,serif;font-weight:400}
+.title em{font-style:italic;color:var(--gold)}
+.stars{color:var(--gold)}
+.qr{display:block;background:#fff}
+.url{letter-spacing:.15em;color:var(--muted)}
+/* Plaque A5 */
+.a5{width:148mm;height:210mm;padding:14mm}
+.a5 .logo{font-size:30mm}
+.a5 .sub{font-size:3mm;margin-top:1mm}
+.a5 .title{font-size:11mm;margin:9mm 0 1mm}
+.a5 .en{font-family:"Bodoni Moda",Georgia,serif;font-style:italic;font-size:5mm;color:var(--muted)}
+.a5 .stars{font-size:6mm;letter-spacing:2mm;margin:4mm 0 5mm}
+.a5 .qr{width:62mm;height:62mm;padding:2mm;border:1px solid var(--gold)}
+.a5 .scan{font-size:3.6mm;margin-top:5mm}
+.a5 .url{font-size:2.8mm;margin-top:2mm}
+/* Autocollant carré 10 cm */
+.sq{width:100mm;height:100mm;padding:8mm}
+.sq .logo{font-size:15mm}
+.sq .title{font-size:5mm;margin:1mm 0 2.5mm}
+.sq .qr{width:46mm;height:46mm}
+.sq .scan{font-size:2.6mm;margin-top:2.5mm}
+.mode-sq .a5,.mode-a5 .sq{display:none}
+@media print{
+  body{background:none}
+  .tools{display:none}
+  .sheet{padding:0;display:block}
+  .card{box-shadow:none}
+}
+</style>
+<style id="page">@page{size:148mm 210mm;margin:0}</style>
+</head>
+<body class="mode-a5">
+<div class="tools">
+  <h1>Plaque &amp; autocollant « Votre avis »</h1>
+  <p>Le QR code mène à <strong>milousports.fr/avis</strong>. Choisissez le format, puis « Enregistrer en PDF » : dans la fenêtre d'impression, destination « Enregistrer au format PDF », marges « Aucune », et cochez « Graphiques d'arrière-plan ».</p>
+  <button type="button" class="alt" onclick="mode('a5')">Plaque A5</button>
+  <button type="button" class="alt" onclick="mode('sq')">Autocollant 10 × 10 cm</button>
+  <button type="button" onclick="print()">Enregistrer en PDF</button>
+</div>
+<div class="sheet">
+  <div class="card a5">
+    <div class="logo">Milou</div>
+    <div class="sub">Sports · Les 2 Alpes</div>
+    <div class="title">Votre avis <em>compte</em></div>
+    <div class="en">Your review matters</div>
+    <div class="stars">★★★★★</div>
+    <svg class="qr" viewBox="-2 -2 37 37" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img" aria-label="QR code milousports.fr/avis"><rect x="-2" y="-2" width="37" height="37" fill="#fff"/><path fill="#2B2620" d=""/></svg>
+    <div class="scan">Scannez pour laisser un avis · Scan to review us</div>
+    <div class="url">MILOUSPORTS.FR/AVIS</div>
+  </div>
+  <div class="card sq">
+    <div class="logo">Milou</div>
+    <div class="title">Votre avis <em>compte</em></div>
+    <svg class="qr" viewBox="-2 -2 37 37" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges" role="img" aria-label="QR code milousports.fr/avis"><rect x="-2" y="-2" width="37" height="37" fill="#fff"/><path fill="#2B2620" d=""/></svg>
+    <div class="scan">Scannez pour laisser un avis · Scan to review us</div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script>
+(function(){var q=qrcode(0,"H");q.addData("https://milousports.fr/avis/");q.make();var n=q.getModuleCount(),d="";for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(q.isDark(r,c))d+="M"+c+" "+r+"h1v1h-1z";document.querySelectorAll(".qr").forEach(function(svg){svg.setAttribute("viewBox","-2 -2 "+(n+4)+" "+(n+4));svg.querySelector("rect").setAttribute("width",n+4);svg.querySelector("rect").setAttribute("height",n+4);svg.querySelector("path").setAttribute("d",d);});})();
+function mode(m){document.body.className='mode-'+m;document.getElementById('page').textContent=m==='a5'?'@page{size:148mm 210mm;margin:0}':'@page{size:100mm 100mm;margin:0}';}
+</script>
+</body>
+</html>
