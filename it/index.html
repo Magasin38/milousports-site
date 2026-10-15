@@ -311,12 +311,13 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 /* En-tête ordinateur : tout tient sur une ligne */
 @media (min-width:641px){
   .nav{flex-wrap:nowrap;gap:12px}
-  .nav ul{gap:clamp(12px,1.5vw,30px)}
+  header .wrap.nav{max-width:1440px}
+  .nav ul{gap:22px}
   .nav ul a{white-space:nowrap;letter-spacing:.18em}
   .nav .lang{margin-left:clamp(10px,1.4vw,24px);white-space:nowrap}
   .nav-book{flex:none;margin-left:clamp(10px,1.2vw,20px)}
 }
-@media (min-width:641px) and (max-width:1360px){.nav ul li:nth-child(3),.nav ul li:nth-child(6){display:none}}
+@media (min-width:641px) and (max-width:1460px){.nav ul li:nth-child(3),.nav ul li:nth-child(6){display:none}}
 @media (min-width:641px) and (max-width:1100px){.nav ul li:nth-child(2),.nav ul li:nth-child(5){display:none}}
 @media (min-width:641px) and (max-width:860px){.nav ul{display:none}}
 .cta-band{background:var(--ink);color:var(--ivory);text-align:center;padding-block:clamp(56px,8vw,96px)}
