@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page introuvable – Milou Sports</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{--ivory:#FBF9F5;--ink:#2B2620;--muted:#7A6F62;--gold:#B08D57;--line:rgba(176,141,87,.35);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ivory:#1C1915;--ink:#F1EBE1;--muted:#B3A795;--gold:#CFAE74;--line:rgba(207,174,116,.3);color-scheme:dark}}
+:root[data-theme="dark"]{--ivory:#1C1915;--ink:#F1EBE1;--muted:#B3A795;--gold:#CFAE74;--line:rgba(207,174,116,.3);color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--ivory);color:var(--ink);font:300 16px/1.7 "Jost","Avenir Next","Helvetica Neue",Arial,sans-serif;text-align:center}
+main{max-width:620px;padding:48px 16px}
+.logo{font-family:"Alex Brush","Brush Script MT",cursive;font-size:clamp(3.2rem,12vw,5rem);line-height:1;color:var(--ink);text-decoration:none}
+h1{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:clamp(1.6rem,5vw,2.2rem);margin:28px 0 12px}
+h1 em{font-style:italic;color:var(--gold)}
+p{margin:0 auto;color:var(--muted);max-width:44ch}
+.en{margin-top:10px;font-size:.9rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.btn{display:inline-block;padding:16px 30px;font-size:.72rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:background .3s,color .3s}
+.btn.solid{background:var(--gold);color:var(--ivory)}
+.btn.solid:hover{background:transparent;color:var(--gold)}
+.btn.ghost{color:var(--ink)}
+.btn.ghost:hover{background:var(--gold);color:var(--ivory)}
+.langs{margin-top:30px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.langs a{color:var(--muted);text-decoration:none;margin:0 8px}
+.langs a:hover{color:var(--gold)}
+@media (max-width:640px){.cta{flex-direction:column;align-items:stretch}}
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="/">Milou</a>
+  <h1>Cette page s'est perdue <em>hors-piste</em></h1>
+  <p>La page que vous cherchez n'existe pas ou a changé d'adresse. Pas d'inquiétude : votre location vous attend toujours.</p>
+  <p class="en">This page went off-piste. Your ski hire is still waiting for you.</p>
+  <div class="cta">
+    <a class="btn solid" href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener">Réserver ma location</a>
+    <a class="btn ghost" href="/">Retour à l'accueil</a>
+  </div>
+  <div class="langs"><a href="/">Français</a><a href="/en/">English</a><a href="/nl/">Nederlands</a><a href="/it/">Italiano</a></div>
+</main>
+</body>
+</html>
