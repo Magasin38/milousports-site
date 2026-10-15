@@ -1,9 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <title>Premium ski hire &amp; luxury ski shop in Les Deux Alpes – Milou Sports</title>
-<meta name="description" content="Luxury ski shop and premium ski, snowboard and snowscoot hire in Les Deux Alpes, 200 m from the Diable chairlift: Fusalp, Bogner, Perfect Moment, UGG. Workshop on display, ski storage, delivery.">
+<meta name="description" content="Luxury ski shop and premium ski, snowboard and snowscoot hire in Les Deux Alpes, 200 m from the Diable chairlift: Fusalp, Bogner, Perfect Moment, UGG. Open workshop, ski storage, delivery.">
 <link rel="canonical" href="https://milousports.fr/en/">
 <link rel="alternate" hreflang="fr" href="https://milousports.fr/">
 <link rel="alternate" hreflang="en" href="https://milousports.fr/en/">
+<link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/">
+<link rel="alternate" hreflang="it" href="https://milousports.fr/it/">
 <link rel="alternate" hreflang="x-default" href="https://milousports.fr/">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#B08D57">
@@ -26,7 +28,7 @@
   "name": "Ski hire in Les Deux Alpes – Milou Sports",
   "inLanguage": "en",
   "about": {"@id": "https://milousports.fr/#boutique"},
-  "description": "Luxury ski shop and premium ski, snowboard and snowscoot hire in Les Deux Alpes, 200 m from the Diable chairlift and the lift pass offices. Workshop on display with skis serviced after each use, servicing of your own skis, ski storage, ski delivery to your door, walk-in hire thanks to a large rental fleet. Ski and mountain fashion shop."
+  "description": "Luxury ski shop and premium ski, snowboard and snowscoot hire in Les Deux Alpes, 200 m from the Diable chairlift and the lift pass offices. Open workshop in full view from the street, with skis serviced after each use, servicing of your own skis, ski storage, ski delivery to your door, walk-in hire thanks to a large rental fleet. Ski and mountain fashion shop."
 }
 </script>
 <script type="application/ld+json">
@@ -40,7 +42,7 @@
     {"@type": "Question", "name": "Can I hire skis on the spot in Les Deux Alpes without booking?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Thanks to our large rental fleet, you can come straight to Milou Sports, 126 avenue de la Muzelle, and leave fully equipped without booking in advance."}},
     {"@type": "Question", "name": "Where can I find a luxury ski shop in Les Deux Alpes?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Milou Sports, 126 avenue de la Muzelle in Les Deux Alpes, is a luxury ski shop carrying Fusalp, Bogner, Perfect Moment, Colmar, Lacoste, From Future, UGG and Oakley, with premium ski hire and a workshop on display."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Milou Sports, 126 avenue de la Muzelle in Les Deux Alpes, is a luxury ski shop carrying Fusalp, Bogner, Perfect Moment, Colmar, Lacoste, From Future, UGG and Oakley, with premium ski hire and an open workshop in full view."}},
     {"@type": "Question", "name": "Where is Milou Sports?",
      "acceptedAnswer": {"@type": "Answer", "text": "Milou Sports is at 126 avenue de la Muzelle, 38860 Les Deux Alpes (Isère, France), 200 m from the Diable chairlift and the lift pass offices."}},
     {"@type": "Question", "name": "What are Milou Sports' opening hours?",
@@ -50,7 +52,7 @@
     {"@type": "Question", "name": "Where can I hire a snowscoot in Les Deux Alpes?",
      "acceptedAnswer": {"@type": "Answer", "text": "At Milou Sports, 126 avenue de la Muzelle, 200 m from the Diable chairlift: new-generation full-suspension Centsix snowscoots, in several ranges. More at https://milousports.fr/en/snowscoot-hire-les-deux-alpes/"}},
     {"@type": "Question", "name": "Can I change my equipment during my stay?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Yes, equipment can be exchanged during your stay. Bindings are adjusted to you and every pair of skis is serviced after each use in our workshop, visible from the street."}},
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes, equipment can be exchanged during your stay. Bindings are adjusted to you and every pair of skis is serviced after each use in our open workshop, in full view from the street."}},
     {"@type": "Question", "name": "Can I get my own skis serviced in Les Deux Alpes at Milou Sports?",
      "acceptedAnswer": {"@type": "Answer", "text": "Yes, our workshop also services your own equipment: hot waxing, edge sharpening, base repair and binding adjustment. Drop your skis off in the evening and, depending on how busy we are, pick them up ready the next morning."}},
     {"@type": "Question", "name": "Do you offer ski storage?",
@@ -391,6 +393,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 .contact .photo figcaption{color:color-mix(in srgb,var(--ivory) 55%,transparent)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .contact .photo figcaption{color:var(--muted)}}
 
+/* Marques : collections au survol ou au clic */
+.brands li.has-look>.row{cursor:pointer}
+.brands li.has-look .cols{display:none}
+.brands li.has-look.open .cols{display:flex}
+@media (hover:hover){.brands li.has-look:hover .cols,.brands li.has-look:focus-within .cols{display:flex}}
+@media (max-width:640px){.brands li.has-look.open .cols{display:grid}}
+.brands li.has-look .name::after{content:"+";display:inline-block;margin-left:.35em;font-family:var(--body);font-size:.45em;font-weight:400;color:var(--gold);vertical-align:.5em;transition:transform .3s}
+.brands li.has-look.open .name::after{transform:rotate(45deg)}
+@media (hover:hover){.brands li.has-look:hover .name::after{transform:rotate(45deg)}}
+
 /* Lookbook Fusalp */
 .brands li.has-look{display:block;padding-block:clamp(20px,3vw,30px)}
 .brands li.has-look>.row{display:grid;grid-template-columns:4rem 1fr auto;align-items:baseline;gap:20px}
@@ -460,7 +472,7 @@ html.lock{overflow:hidden}
       <li><a href="#contact">Find us</a></li>
     </ul>
     <a class="nav-book" href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener">Book</a>
-    <div class="lang" aria-label="Language"><a href="/" hreflang="fr" lang="fr">FR</a><span aria-current="true">EN</span></div>
+    <div class="lang" aria-label="Language"><a href="/" hreflang="fr" lang="fr">FR</a><span aria-current="true">EN</span><a href="/nl/" hreflang="nl" lang="nl">NL</a><a href="/it/" hreflang="it" lang="it">IT</a></div>
   </nav>
 </header>
 
@@ -625,7 +637,7 @@ html.lock{overflow:hidden}
           <p>Heat-moulded ski boots, helmets and goggles, to hire on their own or with your skis.</p>        </article>
       </div>
       <div class="rent-svc">
-        <div class="svc"><h3>A workshop on display</h3><p>Our workshop is dedicated to your equipment and visible from the street: every pair of skis is serviced after each use.</p></div>
+        <div class="svc"><h3>The workshop in full view</h3><p>Like an open kitchen, our workshop opens onto the street: watch our ski technicians prepare your skis, serviced after every use.</p></div>
         <div class="svc"><h3>Ski storage</h3><p>Leave your skis at the shop and head off light-hearted to relax after your day on the slopes.</p></div>
         <div class="svc"><h3>Delivery to your accommodation</h3><p>On request, we deliver your skis directly to your door for a stress-free start.</p></div>
       </div>
@@ -650,7 +662,7 @@ html.lock{overflow:hidden}
           <span class="eyebrow">L'Atelier by Milou</span>
           <h2>Your skis in <em>expert hands</em></h2>
           <p class="lede">Because your skis deserve the best, our workshop prepares them by hand, like a collector's piece.</p>
-          <p class="body">Visible from the street through our shop window, the workshop is entirely dedicated to your equipment: every rental ski is serviced after each use, for a perfect glide every time.</p>
+          <p class="body">Open onto the street like a chef’s kitchen, the workshop is entirely dedicated to your equipment: every rental ski is serviced after each use, for a perfect glide every time.</p>
           <p class="body">Our ski technicians also take care of your own equipment: drop your skis off in the evening and, depending on how busy we are, pick them up ready to ride the next morning.</p>
           <ul class="skills">
             <li>Hand hot waxing</li>
@@ -658,7 +670,7 @@ html.lock{overflow:hidden}
             <li>Base repair</li>
             <li>Binding adjustment</li>
             <li>Servicing after each use</li>
-            <li>Workshop on display</li>
+            <li>Open workshop, in full view</li>
           </ul>
         </div>
       </div>
@@ -716,12 +728,12 @@ html.lock{overflow:hidden}
       <div class="qa">
         <details><summary>How do I book my ski hire in Les Deux Alpes?</summary><p>Book online on our <a href="https://location-ski.sport2000.fr/partner/609-milousportsfr" target="_blank" rel="noopener">Sport 2000 Milou Sports booking page</a>, by phone on <a href="tel:+33476805042">+33 4 76 80 50 42</a>, or directly in the shop.</p></details>
         <details><summary>Can I hire on the spot, without booking?</summary><p>Yes. Thanks to our large rental fleet, you can come straight to the shop and leave fully equipped, without booking in advance.</p></details>
-        <details><summary>Where can I find a luxury ski shop in Les Deux Alpes?</summary><p>At Milou Sports, 126 avenue de la Muzelle: a luxury ski shop carrying Fusalp, Bogner, Perfect Moment, Colmar, Lacoste, From Future, UGG and Oakley, with premium ski hire and a workshop on display.</p></details>
+        <details><summary>Where can I find a luxury ski shop in Les Deux Alpes?</summary><p>At Milou Sports, 126 avenue de la Muzelle: a luxury ski shop carrying Fusalp, Bogner, Perfect Moment, Colmar, Lacoste, From Future, UGG and Oakley, with premium ski hire and an open workshop in full view.</p></details>
         <details><summary>Where is the shop?</summary><p>At 126 avenue de la Muzelle, 38860 Les Deux Alpes (Isère, France): an ideally located corner shop close to the slopes, 200 m from the Diable chairlift and the lift pass offices.</p></details>
         <details><summary>What are your opening hours?</summary><p>Every day from 8:30 am to 7:30 pm during the winter season, from 27 November 2026 to 2 May 2027.</p></details>
         <details><summary>What equipment can I hire?</summary><p>Skis (Blue, Red, Black and Diamond ranges), snowboards, snowscoots, ski boots, helmets and goggles, as well as equipment for children.</p></details>
         <details><summary>Do you hire snowscoots in Les Deux Alpes?</summary><p>Yes: new-generation full-suspension Centsix snowscoots, in several ranges. All the details on our <a href="/en/snowscoot-hire-les-deux-alpes/">snowscoot hire in Les Deux Alpes</a> page.</p></details>
-        <details><summary>Can I change my equipment during my stay?</summary><p>Yes, equipment can be exchanged during your stay. Bindings are adjusted to you and every pair of skis is serviced after each use in our workshop, visible from the street.</p></details>
+        <details><summary>Can I change my equipment during my stay?</summary><p>Yes, equipment can be exchanged during your stay. Bindings are adjusted to you and every pair of skis is serviced after each use in our open workshop, in full view from the street.</p></details>
         <details><summary>Can you service my own skis?</summary><p>Yes, our workshop also services your own equipment: hot waxing, edge sharpening, base repair and binding adjustment. Drop your skis off in the evening and, depending on how busy we are, pick them up ready the next morning.</p></details>
         <details><summary>Do you offer ski storage?</summary><p>Yes, we keep your skis at the shop, so you can head off light-hearted and relax after your day on the slopes.</p></details>
         <details><summary>Do you deliver skis to my accommodation?</summary><p>Yes, ski delivery to your accommodation is possible. Call us on <a href="tel:+33476805042">+33 4 76 80 50 42</a> to arrange it.</p></details>
@@ -941,6 +953,13 @@ html.lock{overflow:hidden}
       var f=reel.querySelector('figure');var step=f?f.getBoundingClientRect().width+20:300;
       reel.scrollBy({left:step*Number(b.dataset.scroll),behavior:'smooth'});
     })});
+  });
+  document.querySelectorAll('.brands li.has-look').forEach(function(li){
+    var row=li.querySelector('.row'); if(!row)return;
+    row.setAttribute('role','button'); row.setAttribute('tabindex','0'); row.setAttribute('aria-expanded','false');
+    function toggle(){var o=!li.classList.contains('open');document.querySelectorAll('.brands li.has-look.open').forEach(function(x){if(x!==li){x.classList.remove('open');x.querySelector('.row').setAttribute('aria-expanded','false')}});li.classList.toggle('open',o);row.setAttribute('aria-expanded',o?'true':'false');}
+    row.addEventListener('click',toggle);
+    row.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
   });
   var h=location.hash;
   if(h==='#fusalp')open('look-fusalp',null,'reel-fusalp',"women's");
