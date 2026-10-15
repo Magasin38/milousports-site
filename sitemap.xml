@@ -56,4 +56,44 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/"/>
   </url>
+  <url>
+    <loc>https://milousports.fr/galerie/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/galerij/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/galleria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/galerie/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/en/gallery/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/galerij/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/galleria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/galerie/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/nl/galerij/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/galerij/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/galleria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/galerie/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/it/galleria/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/galerij/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/galleria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/galerie/"/>
+  </url>
 </urlset>
