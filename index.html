@@ -272,6 +272,19 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:co
 .nav-book{order:3;margin-left:clamp(14px,2vw,24px);padding:10px 18px;font-size:.66rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ivory);background:var(--gold);border:1px solid var(--gold);white-space:nowrap;transition:background .3s,color .3s}
 .nav-book:hover{background:transparent;color:var(--gold)}
 @media (max-width:640px){.nav-book{display:none}}
+/* Menu Marques déroulant */
+.nav ul li.has-sub{position:relative}
+.nav .sub{display:none}
+@media (min-width:641px){
+  .nav .sub{position:absolute;top:100%;left:-20px;z-index:30;min-width:220px;padding:18px 20px;margin-top:0;background:var(--ivory);border:1px solid var(--line);box-shadow:0 18px 40px -20px rgba(43,38,32,.35);display:none;flex-direction:column;gap:10px}
+  .nav .sub::before{content:"";position:absolute;left:0;right:0;top:-14px;height:14px}
+  .nav ul li.has-sub:hover .sub,.nav ul li.has-sub:focus-within .sub{display:flex}
+  .nav .sub a{font-family:var(--display);font-size:1rem;letter-spacing:0;text-transform:none;color:var(--ink);white-space:nowrap}
+  .nav .sub a:hover{color:var(--gold)}
+  .nav ul li.has-sub>a::after{content:" ▾";font-size:.8em;color:var(--gold)}
+}
+.brands li{scroll-margin-top:110px}
+
 /* En-tête ordinateur : tout tient sur une ligne */
 @media (min-width:641px){
   .nav{flex-wrap:nowrap;gap:12px}
@@ -526,7 +539,7 @@ html.lock{overflow:hidden}
     <a href="#top" class="logo">Milou <span>·</span> Sports</a>
     <ul>
       <li><a href="#maison">La Maison</a></li>
-      <li><a href="#marques">Marques</a></li>
+      <li class="has-sub"><a href="#marques">Marques</a><div class="sub"><a href="#marque-fusalp">Fusalp</a><a href="#marque-perfect-moment">Perfect Moment</a><a href="#marque-bogner">Bogner</a><a href="#marque-colmar">Colmar</a><a href="#marque-lacoste">Lacoste</a><a href="#marque-from-future">From Future</a><a href="#marque-ugg">UGG</a><a href="#marque-oakley">Oakley</a></div></li>
       <li><a href="#univers">Univers</a></li>
       <li><a href="#location">Location</a></li>
       <li><a href="#atelier">L'Atelier</a></li>
@@ -588,17 +601,17 @@ html.lock{overflow:hidden}
         <p>Des signatures du ski de luxe aux labels de mode, toutes réunies sous un même toit.</p>
       </header>
       <ul class="brands">
-        <li class="has-look"><div class="row"><span class="origin">France</span><span class="name">Fusalp</span><span class="tag">Ski couture depuis 1952</span></div>
+        <li id="marque-fusalp" class="has-look"><div class="row"><span class="origin">France</span><span class="name">Fusalp</span><span class="tag">Ski couture depuis 1952</span></div>
           <div class="cols"><button type="button" data-open="look-fusalp" data-col="reel-fusalp" data-genre="femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-fusalp" data-col="reel-fusalp-homme" data-genre="homme" aria-haspopup="dialog">Collection homme</button></div></li>
-        <li class="has-look"><div class="row"><span class="origin">Londres</span><span class="name">Perfect Moment</span><span class="tag">Ski &amp; lifestyle</span></div>
+        <li id="marque-perfect-moment" class="has-look"><div class="row"><span class="origin">Londres</span><span class="name">Perfect Moment</span><span class="tag">Ski &amp; lifestyle</span></div>
           <div class="cols"><button type="button" data-open="look-pm" data-col="reel-pm-femme" data-genre="femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-pm" data-col="reel-pm-homme" data-genre="homme" aria-haspopup="dialog">Collection homme</button></div></li>
-        <li class="has-look"><div class="row"><span class="origin">Allemagne</span><span class="name">Bogner</span><span class="tag">Luxe sportif</span></div>
+        <li id="marque-bogner" class="has-look"><div class="row"><span class="origin">Allemagne</span><span class="name">Bogner</span><span class="tag">Luxe sportif</span></div>
           <div class="cols"><button type="button" data-open="look-bogner" data-col="reel-bogner-vf" data-genre="femme" data-label="La collection femme" aria-haspopup="dialog">Collection femme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-vh" data-genre="homme" data-label="La collection homme" aria-haspopup="dialog">Collection homme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-femme" data-genre="femme" data-label="Les chaussures femme" aria-haspopup="dialog">Chaussures femme</button><button type="button" data-open="look-bogner" data-col="reel-bogner-homme" data-genre="homme" data-label="Les chaussures homme" aria-haspopup="dialog">Chaussures homme</button></div></li>
-        <li><span class="origin">Italie</span><span class="name">Colmar</span><span class="tag">Technique &amp; style</span></li>
-        <li><span class="origin">France</span><span class="name">Lacoste</span><span class="tag">Élégance sportive</span></li>
-        <li><span class="origin">France</span><span class="name">From Future</span><span class="tag">Maille cachemire</span></li>
-        <li><span class="origin">Californie</span><span class="name">UGG</span><span class="tag">Bottes &amp; après-ski</span></li>
-        <li><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques, lunettes &amp; accessoires</span></li>
+        <li id="marque-colmar"><span class="origin">Italie</span><span class="name">Colmar</span><span class="tag">Technique &amp; style</span></li>
+        <li id="marque-lacoste"><span class="origin">France</span><span class="name">Lacoste</span><span class="tag">Élégance sportive</span></li>
+        <li id="marque-from-future"><span class="origin">France</span><span class="name">From Future</span><span class="tag">Maille cachemire</span></li>
+        <li id="marque-ugg"><span class="origin">Californie</span><span class="name">UGG</span><span class="tag">Bottes &amp; après-ski</span></li>
+        <li id="marque-oakley"><span class="origin">Californie</span><span class="name">Oakley</span><span class="tag">Masques, lunettes &amp; accessoires</span></li>
       </ul>
     </div>
   </section>
@@ -1025,6 +1038,7 @@ html.lock{overflow:hidden}
     row.addEventListener('click',toggle);
     row.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
   });
+  document.querySelectorAll('.nav .sub a').forEach(function(a){a.addEventListener('click',function(){var li=document.getElementById(a.hash.slice(1));if(li&&li.classList.contains('has-look')){document.querySelectorAll('.brands li.has-look.open').forEach(function(x){x.classList.remove('open')});li.classList.add('open');var r=li.querySelector('.row');if(r)r.setAttribute('aria-expanded','true');}if(document.activeElement)document.activeElement.blur();});});
   var h=location.hash;
   if(h==='#fusalp')open('look-fusalp',null,'reel-fusalp','femme');
   if(h==='#fusalp-homme')open('look-fusalp',null,'reel-fusalp-homme','homme');
