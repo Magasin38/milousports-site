@@ -41,6 +41,9 @@
 .adr .map:hover{text-decoration:underline}
 .adr-note{padding-block:20px 8px;text-align:center;font-size:.82rem;color:var(--muted)}
 
+/* Barre mobile : se cache quand elle gênerait */
+.m-bar{transition:transform .35s ease,opacity .35s ease}
+.m-bar.hide{transform:translateY(120%);opacity:0;pointer-events:none}
 /* Mode sombre : textes des sections foncées */
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .contact,:root:not([data-theme="light"]) .cta-band{color:#F1EBE1}
@@ -702,6 +705,7 @@ html.lock{overflow:hidden}
   ]
 }
 </script>
+<script>(function(){var b=document.querySelector(".m-bar");if(!b||!("IntersectionObserver" in window))return;var on=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on.add(e.target);else on.delete(e.target)});b.classList.toggle("hide",on.size>0)},{threshold:0});[".hero .cta",".cta-band",".contact","footer"].forEach(function(s){var el=document.querySelector(s);if(el)io.observe(el)});})();</script>
 <script data-goatcounter="https://milousports.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>

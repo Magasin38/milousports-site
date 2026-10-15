@@ -433,6 +433,9 @@ html.lock{overflow:hidden}
 @keyframes rise{from{transform:translateY(18px);opacity:.15}to{transform:none;opacity:1}}
 @keyframes draw{to{stroke-dashoffset:0}}
 
+/* Barre mobile : se cache quand elle gênerait */
+.m-bar{transition:transform .35s ease,opacity .35s ease}
+.m-bar.hide{transform:translateY(120%);opacity:0;pointer-events:none}
 /* Mode sombre : textes des sections foncées */
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]) .contact,:root:not([data-theme="light"]) .cta-band{color:#F1EBE1}
@@ -511,6 +514,7 @@ html.lock{overflow:hidden}
   <div class="wrap"><span>© 2026 Milou Sports · <a href="/bonnes-adresses/" style="text-decoration:none">Bonnes adresses</a> · <a href="/mentions-legales/" style="text-decoration:none">Mentions légales</a></span><span><a href="/snowscoot-les-deux-alpes/" style="text-decoration:none">Location snowscoot</a> · <a href="/en/" hreflang="en" lang="en" style="text-decoration:none">English</a> · <a href="https://www.instagram.com/milou_sports/" target="_blank" rel="noopener" style="text-decoration:none">@milou_sports</a> · Les Deux Alpes · Isère</span></div>
 </footer>
 
+<script>(function(){var b=document.querySelector(".m-bar");if(!b||!("IntersectionObserver" in window))return;var on=new Set();var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)on.add(e.target);else on.delete(e.target)});b.classList.toggle("hide",on.size>0)},{threshold:0});[".hero .cta",".cta-band",".contact","footer"].forEach(function(s){var el=document.querySelector(s);if(el)io.observe(el)});})();</script>
 <script data-goatcounter="https://milousports.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
