@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://milousports.fr/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/"/>
@@ -12,13 +12,53 @@
   </url>
   <url>
     <loc>https://milousports.fr/en/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/location-ski-deux-alpes/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/location-ski-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/ski-hire-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/skiverhuur-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/noleggio-sci-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/location-ski-deux-alpes/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/en/ski-hire-les-deux-alpes/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/location-ski-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/ski-hire-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/skiverhuur-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/noleggio-sci-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/location-ski-deux-alpes/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/nl/skiverhuur-les-deux-alpes/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/location-ski-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/ski-hire-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/skiverhuur-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/noleggio-sci-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/location-ski-deux-alpes/"/>
+  </url>
+  <url>
+    <loc>https://milousports.fr/it/noleggio-sci-les-deux-alpes/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/location-ski-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/ski-hire-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://milousports.fr/nl/skiverhuur-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://milousports.fr/it/noleggio-sci-les-deux-alpes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://milousports.fr/location-ski-deux-alpes/"/>
   </url>
   <url>
     <loc>https://milousports.fr/snowscoot-les-deux-alpes/</loc>
@@ -38,7 +78,7 @@
   </url>
   <url>
     <loc>https://milousports.fr/nl/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/"/>
@@ -48,7 +88,7 @@
   </url>
   <url>
     <loc>https://milousports.fr/it/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://milousports.fr/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://milousports.fr/en/"/>
